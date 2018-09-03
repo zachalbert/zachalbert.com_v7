@@ -10,7 +10,7 @@ $sizeModLarge:         1.9;
 
 $universeColor:        #fff;
 $planetColor:          #fff;
-$planetShadow:         #303030;
+$planetShadow:         #000;
 
 $planetBorderColor:    rgba(255,255,255,0.05);
 $planetBorder:         1px solid $planetBorderColor;
@@ -91,7 +91,7 @@ $solarSystem: (
     diameter: 0.950vw / $sizeModSmall,
     symbolOffset: 3.5em,
     speed: 1s * ( 224.63 / $speedLimit),
-    orbitDiameter: 20vw,
+    orbitDiameter: 21vw,
     start: 237deg
   ),
   earth: (
@@ -101,7 +101,7 @@ $solarSystem: (
     diameter: 1.00vw / $sizeModSmall,
     symbolOffset: 3.5em,
     speed: 1s * ( 365.26 / $speedLimit),
-    orbitDiameter: 30vw,
+    orbitDiameter: 29vw,
     start: 249deg
   ),
   mars: (
@@ -111,7 +111,7 @@ $solarSystem: (
     diameter: 0.532vw / $sizeModSmall,
     symbolOffset: 3.1em,
     speed: 1s * ( 687.05 / $speedLimit),
-    orbitDiameter: 40vw,
+    orbitDiameter: 35vw,
     start: 16.5deg
   ),
   jupiter: (
@@ -121,7 +121,7 @@ $solarSystem: (
     diameter: 10.97vw / $sizeModLarge,
     symbolOffset: 4.7em,
     speed: 1s * ( 4331.94 / $speedLimit),
-    orbitDiameter: 50vw,
+    orbitDiameter: 51vw,
     // start: 252deg
     start: 330deg
   ),
@@ -132,7 +132,7 @@ $solarSystem: (
     diameter: 9.14vw / $sizeModLarge,
     symbolOffset: 4.4em,
     speed: 1s * ( 10760.45 / $speedLimit),
-    orbitDiameter: 60vw,
+    orbitDiameter: 65vw,
     // start: 187.5deg
     start: 230deg
   ),
@@ -143,7 +143,7 @@ $solarSystem: (
     diameter: 3.98vw / $sizeModLarge,
     symbolOffset: 3.3em,
     speed: 1s * ( 30685.19 / $speedLimit),
-    orbitDiameter: 70vw,
+    orbitDiameter: 74vw,
     start: 65.5deg
   ),
   neptune: (
@@ -153,7 +153,7 @@ $solarSystem: (
     diameter: 3.86vw / $sizeModLarge,
     symbolOffset: 3.3em,
     speed: 1s * ( 60194.25 / $speedLimit),
-    orbitDiameter: 80vw,
+    orbitDiameter: 85vw,
     start: 108deg
   ),
   pluto: (
@@ -163,7 +163,7 @@ $solarSystem: (
     diameter: 0.185vw / $sizeModSmallest,
     symbolOffset: 2.8em,
     speed: 1s * ( 90620.10 / $speedLimit),
-    orbitDiameter: 90vw,
+    orbitDiameter: 95vw,
     start: 160deg
   )
 );

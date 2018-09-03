@@ -36,6 +36,11 @@
         height: $orbitDiameter;
         margin-top: -($orbitDiameter / 2);
         margin-left: -($orbitDiameter / 2);
+
+        &:after {
+          width: $diameter;
+          height: $diameter;
+        }
       }
 
       .planet {
@@ -49,7 +54,7 @@
       }
 
       .symbol {
-        top: -$symbolOffset;
+        top: -8vw + ( $diameter / 2 );
       }
     }
   }
@@ -95,7 +100,6 @@
   position: absolute;
   text-align: center;
   font-size: 1rem;
-  top: -2.5rem;
   left: 50%;
   background: $symbolColorBG;
   border: 1px solid $symbolColorBorder;
@@ -131,6 +135,16 @@
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
     border-top: 4px solid $symbolColorBG;
+  }
+}
+
+.sun .symbol {
+  margin-top: 0.5em;
+  border: none;
+
+  &:before,
+  &:after {
+    content: none;
   }
 }
 
