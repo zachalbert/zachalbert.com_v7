@@ -21,4 +21,10 @@ $(document).ready(function() {
     $(this).toggleClass('active');
   });
 
+  $('#gridToggle').click( function(e) {
+    e.preventDefault();
+    $('body').toggleClass('row-grid-show');
+    $(this).toggleClass('active');
+  });
+
 });
