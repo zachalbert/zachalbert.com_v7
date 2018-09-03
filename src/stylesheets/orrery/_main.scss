@@ -1,0 +1,208 @@
+/* The .universe is a max width/height container, for adding background effects on top of the starfield on the body */
+.universe {
+  z-index: 1;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 700px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform:translate3d(0,0,0);
+  pointer-events: none;
+  /* Make stuff gooey */
+  // -webkit-filter: url("#goo");
+  // filter: url("#goo");
+
+  &.labels-on {
+    .symbol {
+      display: block;
+    }
+  }
+
+  &_controls {
+    z-index: 500;
+    top: 72px;
+    left: 24px;
+    position: absolute;
+    display: inline-block;
+    pointer-events: all;
+
+    a {
+      display: block;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      font-weight: 700;
+      line-height: 48px;
+      border: 1px solid white;
+      margin-bottom: 8px;
+      border-radius: 50%;
+      background: transparent;
+      transition: background 0.25s ease-in-out;
+      color: white;
+      font-size: 0.6em;
+
+      &.active,
+      &:hover {
+        background: white;
+        color: black;
+        transition: background 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .pos,
+  .planet,
+  .light-side,
+  .orbit {
+    animation-play-state: paused;
+  }
+
+  &.play {
+    .pos,
+    .planet,
+    .light-side,
+    .orbit {
+      animation-play-state: running;
+    }
+  }
+}
+
+.bg-slant {
+  background: black;
+  height: 59%;
+  width: 100%;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  transform: skewY(-15deg);
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background: white;
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* The .galaxy is a relative positioned parent, meant to stretch inside its parent. */
+.galaxy {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateX($viewingAngle);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.pos {
+  position: absolute;
+  left: 50%;
+  transform-style: preserve-3d;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.light-side {
+  background: $planetColor;
+  border: $lightSideBorder;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.planet {
+  position: relative;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  // margin-top: -0.5em;
+  margin-top: 0;
+  margin-left: -0.5em;
+  border-radius: 50%;
+  background-color: $planetShadow;
+  border: $planetBorder;
+  overflow: hidden;
+
+  &.sun {
+    background-color: $planetColor;
+  }
+}
+
+.symbol {
+  display: none;
+  color: $symbolColor;
+  position: absolute;
+  text-align: center;
+  font-size: 1rem;
+  top: -2.5rem;
+  left: 50%;
+  background: $symbolColorBG;
+  border: 1px solid $symbolColorBorder;
+  padding: 0.2em 0;
+  line-height: 1;
+  width: 1.5em;
+  margin-left: -0.75em;
+  text-align: center;
+  border-radius: 50%;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -4px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid $symbolColorBorder;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -2px;
+    width: 0;
+    height: 0;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 4px solid $symbolColorBG;
+  }
+}
+
+.orbit {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  border: $orbitBorder;
+  background: none;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Callout colors */
+.orbit.callout {
+  .planet {
+    background: #47b3ff;
+  }
+  .light-side {
+    background: #56e0ff;
+    border: none;
+  }
+}

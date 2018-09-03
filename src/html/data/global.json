@@ -1,3 +1,14 @@
 {
-  "message": "Blendid!"
+  "title": "Orrery 2017",
+  "planets": {
+    "mercury" : "☿",
+    "venus"   : "♀",
+    "earth"   : "♁",
+    "mars"    : "♂",
+    "jupiter" : "♃",
+    "saturn"  : "♄",
+    "uranus"  : "♅",
+    "neptune" : "♆",
+    "pluto"   : "♇"
+  }
 }

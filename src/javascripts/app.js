@@ -1,3 +1,6 @@
+import 'jquery'
 import './modules'
 
-console.log(`app.js has loaded!`)
+/* Import JS to run orrery */
+import './orrery/orrery'
+import './orrery/starField'

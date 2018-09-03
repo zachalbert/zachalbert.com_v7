@@ -1,0 +1,69 @@
+/* Planet construction */
+
+@function planet($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+.sun {
+  font-size: planet($solarSystem, sun, diameter);
+  transform: rotateX(-$viewingAngle);
+  top: 0%;
+}
+
+@each $planet, $props in $solarSystem {
+  @if( $planet != 'sun' ) {
+    $i:             planet( $solarSystem, #{$planet}, id );
+    $top:           ($verticalOffset ) * 1;
+
+    $diameter:      planet( $solarSystem, #{$planet}, diameter );
+    $symbolOffset:  planet( $solarSystem, #{$planet}, symbolOffset );
+    $orbitDiameter: planet( $solarSystem, #{$planet}, orbitDiameter );
+    $orbitSpeed:    planet( $solarSystem, #{$planet}, speed );
+
+    $startOffset:   planet( $solarSystem, #{$planet}, start );
+    $offset:        $startOffset / 360deg;
+    $delay:         -($orbitSpeed - ($orbitSpeed * $offset));
+
+    @if $syncPlanets == true {
+      $orbitSpeed: 20s; /* Sync orbital periods, for dev purposes */
+    }
+
+    .#{$planet} {
+
+      &.orbit,
+      .pos {
+        animation-duration: $orbitSpeed;
+      }
+
+      .pos {
+        animation-name: invert-#{$planet};
+      }
+
+      &.orbit {
+        animation-name: orbit-#{$planet};
+        top: $top;
+        width: $orbitDiameter;
+        height: $orbitDiameter;
+        margin-top: -($orbitDiameter / 2);
+        margin-left: -($orbitDiameter / 2);
+      }
+
+      .planet {
+        font-size: $diameter;
+
+        .light-side {
+          animation-name: light-#{$planet};
+          animation-duration: $orbitSpeed;
+          animation-delay: $delay;
+        }
+      }
+
+      .symbol {
+        top: -$symbolOffset;
+      }
+    }
+  }
+}

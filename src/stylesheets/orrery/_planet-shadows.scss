@@ -1,0 +1,72 @@
+/* The positioning of the shadow on the planet. 0%/100% are the furthest away, 25% left, 50% closest, 75% right */
+@mixin lightStates($diameter, $night) {
+  $nightRadius: $night / 2;
+
+  $sunDown:    50% - $nightRadius;
+  $firstDark:  50% - ($nightRadius / 2);
+
+  $sunUp:      50% + $nightRadius;
+  $firstLight: 50% + ($nightRadius / 2);
+
+  /* Begins behind the sun */
+  0% {
+    left: 0px;
+    top: ( $diameter / 50 );
+    width: 100%;
+    height: 100%;
+  }
+  25% {
+    left: ( $diameter / 10 );
+    top: $diameter / 16;
+    width: 90%;
+    height: 90%;
+  }
+  #{$sunDown} {
+    left: ( $diameter / 2 );
+    top: ( -$diameter / 20 );
+    width: 80%;
+    height: 80%;
+  }
+  #{$firstDark} {
+    left: ( $diameter );
+    top: ( -$diameter / 3 );
+    width: 75%;
+    height: 75%;
+  }
+  50% {
+    top: -$diameter * 1.5;
+  }
+  #{$firstLight} {
+    left: ( -$diameter );
+    top: ( -$diameter / 3 );
+    width: 75%;
+    height: 75%;
+  }
+  #{$sunUp} {
+    left: ( -$diameter / 2 );
+    top: ( -$diameter / 20 );
+    width: 80%;
+    height: 80%;
+  }
+  75% {
+    left: ( -$diameter / 10 );
+    top: $diameter / 16;
+    width: 90%;
+    height: 90%;
+  }
+  100% {
+    left: 0;
+    top: ( $diameter / 50 );
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes light-mercury { @include lightStates( planet( $solarSystem, mercury, diameter ), planet( $solarSystem, mercury, night )); }
+@keyframes light-venus   { @include lightStates( planet( $solarSystem, venus, diameter ),   planet( $solarSystem, venus, night )); }
+@keyframes light-earth   { @include lightStates( planet( $solarSystem, earth, diameter ),   planet( $solarSystem, earth, night )); }
+@keyframes light-mars    { @include lightStates( planet( $solarSystem, mars, diameter ),    planet( $solarSystem, mars, night )); }
+@keyframes light-jupiter { @include lightStates( planet( $solarSystem, jupiter, diameter ), planet( $solarSystem, jupiter, night )); }
+@keyframes light-saturn  { @include lightStates( planet( $solarSystem, saturn, diameter ),  planet( $solarSystem, saturn, night )); }
+@keyframes light-uranus  { @include lightStates( planet( $solarSystem, uranus, diameter ),  planet( $solarSystem, uranus, night )); }
+@keyframes light-neptune { @include lightStates( planet( $solarSystem, neptune, diameter ), planet( $solarSystem, neptune, night )); }
+@keyframes light-pluto   { @include lightStates( planet( $solarSystem, pluto, diameter ),   planet( $solarSystem, pluto, night )); }

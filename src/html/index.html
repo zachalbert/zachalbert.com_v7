@@ -1,11 +1,54 @@
-{#
-  Nunjucks Templating!
-  Homepage: https://mozilla.github.io/nunjucks/
-  Docs: https://mozilla.github.io/nunjucks/api.html
-#}
-
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-  <h1 data-module="example">{{ message }}</h1>
+<h1 data-module="example" class="btn btn-primary">{{ message }}</h1>
+<div class="universe">
+  <div class="universe_controls">
+    <a href="#" id="playToggle" data-module="orrery-controls">Play</a>
+    <a href="#" id="labelToggle" data-module="planetary-labels">Labels</a>
+    <a href="#" id="plutoToggle" data-module="pluto">Pluto</a>
+  </div>
+  <div class="bg-slant"></div>
+  <div class="galaxy">
+
+    <div class="sun planet">
+      <div class="symbol">☉</div>
+    </div>
+
+    {% for planet, symbol in planets %}
+      <div class="{{ planet }} orbit{% if planet == 'earth' %} callout{% endif %}">
+        <div class="pos">
+          <div class="symbol">{{ symbol }}</div>
+          <div class="planet">
+            <div class="light-side"></div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 19 -11" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+</div>
+
+<nav class="main">
+  <a href="#">Work</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="page">
+  <h1>The Solar System</h1>
+</div>
 {% endblock %}

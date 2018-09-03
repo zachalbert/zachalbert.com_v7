@@ -1,0 +1,165 @@
+$viewingAngle:         75deg;
+$verticalOffset:       0%;
+$speedLimit:           5;
+$syncPlanets:          false; /* If true, planets will rotate in sync; Useful for debugging */
+
+/* Main size mods */
+$sizeModSmallest:      0.16;
+$sizeModSmall:         0.35;
+$sizeModLarge:         1.9;
+
+/* Size mods for goo
+$sizeModSmallest:      0.2;
+$sizeModSmall:         0.2;
+$sizeModLarge:         1.25;
+*/
+
+$universeColor:        #fff;
+$planetColor:          #fff;
+$planetShadow:         #303030;
+$planetBorderColor:    rgba(255,255,255,0.05);
+$lightSideBorderColor: #000;
+$planetBorder:         1px solid $planetBorderColor;
+$lightSideBorder:      1px solid $lightSideBorderColor;
+
+$orbitColor:           $planetBorderColor;
+// $orbitBorder:          3px solid $orbitColor;
+$orbitBorder:          none;
+
+$symbolColor:          rgba(0,0,0,0.5);
+$symbolColorBG:        rgba(255,255,255,1);
+$symbolColorBorder:    rgba(0,0,0,0.2);
+
+/** Data from
+ ** http://nssdc.gsfc.nasa.gov/planetary/factsheet/
+ **
+ ** Orbital Timing:
+ **
+ ** mercury:   87.97
+ ** venus:     224.63
+ ** earth:     365.26
+ ** mars:      687.05
+ ** jupiter:   4331.94
+ ** saturn:    10760.45
+ ** uranus:    30685.19
+ ** neptune:   60194.25
+ ** pluto:     90620.10
+ ** eris:      203447.79
+ **
+ ** Sizes:
+ **
+ ** mercury:  0.383em / 1;
+ ** venus:    0.950em / 1;
+ ** earth:    1em / 1;
+ ** mars:     0.532em / 1;
+ ** jupiter:  10.97em / 5;
+ ** saturn:   9.14em / 5;
+ ** uranus:   3.98em / 5;
+ ** neptune:  3.86em / 5;
+ ** pluto:    0.185em / 0.5;
+ ** eris:     0.182em / 0.5;
+ **
+ ** All starting point offsets are based on the real positions of the planets
+ ** as of the day this was made, April 11th, 2017.
+ **
+**/
+
+$solarSystem: (
+  sun: (
+    id: 0,
+    name: 'sun',
+    diameter: 12vw / $sizeModLarge
+  ),
+  mercury: (
+    id: 1,
+    night: 20%,
+    name: 'mercury',
+    diameter: 0.383vw / $sizeModSmall,
+    symbolOffset: 2.8em,
+    speed: 1s * ( 87.97 / $speedLimit),
+    orbitDiameter: 13vw,
+    start: 270deg
+  ),
+  venus: (
+    id: 2,
+    night: 20%,
+    name: 'venus',
+    diameter: 0.950vw / $sizeModSmall,
+    symbolOffset: 3.5em,
+    speed: 1s * ( 224.63 / $speedLimit),
+    orbitDiameter: 20vw,
+    start: 237deg
+  ),
+  earth: (
+    id: 3,
+    night: 20%,
+    name: 'earth',
+    diameter: 1.00vw / $sizeModSmall,
+    symbolOffset: 3.5em,
+    speed: 1s * ( 365.26 / $speedLimit),
+    orbitDiameter: 30vw,
+    start: 249deg
+  ),
+  mars: (
+    id: 4,
+    night: 20%,
+    name: 'mars',
+    diameter: 0.532vw / $sizeModSmall,
+    symbolOffset: 3.1em,
+    speed: 1s * ( 687.05 / $speedLimit),
+    orbitDiameter: 40vw,
+    start: 16.5deg
+  ),
+  jupiter: (
+    id: 5,
+    night: 20%,
+    name: 'jupiter',
+    diameter: 10.97vw / $sizeModLarge,
+    symbolOffset: 4.7em,
+    speed: 1s * ( 4331.94 / $speedLimit),
+    orbitDiameter: 50vw,
+    // start: 252deg
+    start: 330deg
+  ),
+  saturn: (
+    id: 6,
+    night: 20%,
+    name: 'saturn',
+    diameter: 9.14vw / $sizeModLarge,
+    symbolOffset: 4.4em,
+    speed: 1s * ( 10760.45 / $speedLimit),
+    orbitDiameter: 60vw,
+    // start: 187.5deg
+    start: 230deg
+  ),
+  uranus: (
+    id: 7,
+    night: 20%,
+    name: 'uranus',
+    diameter: 3.98vw / $sizeModLarge,
+    symbolOffset: 3.3em,
+    speed: 1s * ( 30685.19 / $speedLimit),
+    orbitDiameter: 70vw,
+    start: 65.5deg
+  ),
+  neptune: (
+    id: 8,
+    night: 20%,
+    name: 'neptune',
+    diameter: 3.86vw / $sizeModLarge,
+    symbolOffset: 3.3em,
+    speed: 1s * ( 60194.25 / $speedLimit),
+    orbitDiameter: 80vw,
+    start: 108deg
+  ),
+  pluto: (
+    id: 9,
+    night: 20%,
+    name: 'pluto',
+    diameter: 0.185vw / $sizeModSmallest,
+    symbolOffset: 2.8em,
+    speed: 1s * ( 90620.10 / $speedLimit),
+    orbitDiameter: 90vw,
+    start: 160deg
+  )
+);

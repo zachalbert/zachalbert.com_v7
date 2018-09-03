@@ -1,0 +1,34 @@
+@mixin orbit($start) {
+  $end: $start - 360;
+  0%   { transform: rotateZ($start); }
+  100% { transform: rotateZ($end); }
+}
+
+@keyframes orbit-mercury { @include orbit( planet( $solarSystem, mercury, start ) ); }
+@keyframes orbit-venus   { @include orbit( planet( $solarSystem, venus, start ) ); }
+@keyframes orbit-earth   { @include orbit( planet( $solarSystem, earth, start ) ); }
+@keyframes orbit-mars    { @include orbit( planet( $solarSystem, mars, start ) ); }
+@keyframes orbit-jupiter { @include orbit( planet( $solarSystem, jupiter, start ) ); }
+@keyframes orbit-saturn  { @include orbit( planet( $solarSystem, saturn, start ) ); }
+@keyframes orbit-uranus  { @include orbit( planet( $solarSystem, uranus, start ) ); }
+@keyframes orbit-neptune { @include orbit( planet( $solarSystem, neptune, start ) ); }
+@keyframes orbit-pluto   { @include orbit( planet( $solarSystem, pluto, start ) ); }
+
+
+/* Counteracts the orbital rotation to keep the 2d planet always facing forward */
+
+@mixin invert($start) {
+  $end: $start - 360;
+  0%   { transform: rotateX(-90deg) rotateY($start) rotateZ(0deg); }
+  100% { transform: rotateX(-90deg) rotateY($end) rotateZ(0deg); }
+}
+
+@keyframes invert-mercury { @include invert( planet( $solarSystem, mercury, start ) ); }
+@keyframes invert-venus   { @include invert( planet( $solarSystem, venus, start ) ); }
+@keyframes invert-earth   { @include invert( planet( $solarSystem, earth, start ) ); }
+@keyframes invert-mars    { @include invert( planet( $solarSystem, mars, start ) ); }
+@keyframes invert-jupiter { @include invert( planet( $solarSystem, jupiter, start ) ); }
+@keyframes invert-saturn  { @include invert( planet( $solarSystem, saturn, start ) ); }
+@keyframes invert-uranus  { @include invert( planet( $solarSystem, uranus, start ) ); }
+@keyframes invert-neptune { @include invert( planet( $solarSystem, neptune, start ) ); }
+@keyframes invert-pluto   { @include invert( planet( $solarSystem, pluto, start ) ); }
