@@ -12,6 +12,6 @@ $(document).ready(function() {
     stars.push('<div class="star" style="top: '+ top +'; left: '+ left +'; width: '+ size +'; height: '+ size +'; opacity: '+ opacity +';"></div>');
   }
 
-  $(".universe .bg-slant").append(stars);
+  $(".starry-night .star-field").append(stars);
 
 });

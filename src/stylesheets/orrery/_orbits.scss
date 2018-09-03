@@ -32,3 +32,23 @@
 @keyframes invert-uranus  { @include invert( planet( $solarSystem, uranus, start ) ); }
 @keyframes invert-neptune { @include invert( planet( $solarSystem, neptune, start ) ); }
 @keyframes invert-pluto   { @include invert( planet( $solarSystem, pluto, start ) ); }
+
+.orbit {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  border: $orbitBorder;
+  background: none;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+  .pos {
+    position: absolute;
+    left: 50%;
+    transform-style: preserve-3d;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}

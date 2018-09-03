@@ -1,24 +1,24 @@
 /* Bootstrap stuff */
 @import "base/bootstrap-custom";
-@import "bootstrap/scss/bootstrap-reboot";
-@import "bootstrap/scss/bootstrap";
-// @import "bootstrap/scss/bootstrap-grid";
+// @import "bootstrap/scss/bootstrap"; /* Entire bootstrap */
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/bootstrap-grid";
 
 /* Main stuff */
 @import "base/defaults";
 @import "base/mixins";
-@import "base/variables";
 
-@import "base/typography";
-@import "base/layout";
+@import "config/main";
+
+@import "layout/typography";
+@import "layout/layout";
 
 @import "main";
 
-@import "components/nav";
+@import "components/header";
 
-/* Orrery stuff */
-@import "orrery/config";
 @import "orrery/main";
-@import "orrery/planets";
-@import "orrery/planet-shadows";
-@import "orrery/orbits";

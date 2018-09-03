@@ -3,12 +3,8 @@ html, body {
 	min-height: 600px;
 }
 
-body {
-  background-color: #fff;
-}
-
 .page {
-  margin-top: 350px;
+	background-color: #fff;
 }
 
 a {
@@ -19,14 +15,4 @@ a {
 		color: #ff5724;
 		border-color: #ff5724;
 	}
-}
-
-h1 {
-  font-style: italic;
-  text-align: center;
-  margin: 2em 0 1em;
-}
-
-.symbol {
-  font-family: 'Open Sans', sans-serif;
 }

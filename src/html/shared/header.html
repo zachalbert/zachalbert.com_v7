@@ -1,0 +1,38 @@
+<header role="masthead" class="page-header starry-night">
+
+  <div class="star-field"></div>
+
+  <nav class="row no-gutters main">
+    <div class="col">
+      <h1 style="text-align: left; color: white; margin: 0;">ZH</h1>
+    </div>
+    <div class="col text-right">
+      <a href="#">Work</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <div class="universe_container">
+
+    <div class="universe_controls">
+      <a href="#" id="playToggle" data-module="orrery-controls">Play</a>
+      <a href="#" id="labelToggle" data-module="planetary-labels">Labels</a>
+      <a href="#" id="plutoToggle" data-module="pluto">Pluto</a>
+    </div>
+
+    {% include "shared/orrery.html" %}
+
+    <div class="universe_cutout">
+      <svg class="universe_cutout_shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon fill="white" points="
+          100,0
+          100,100
+          0,100
+        "/>
+      </svg>
+    </div>
+
+  </div>
+
+</header>

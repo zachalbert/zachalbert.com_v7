@@ -1,0 +1,22 @@
+<div class="universe">
+
+  <div class="galaxy">
+
+    <div class="sun planet">
+      <div class="symbol">☉</div>
+    </div>
+
+    {% for planet, symbol in planets %}
+      <div class="{{ planet }} orbit">
+        <div class="pos">
+          <div class="symbol">{{ symbol }}</div>
+          <div class="planet">
+            <div class="light-side"></div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+
+</div>

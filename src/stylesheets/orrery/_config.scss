@@ -1,34 +1,38 @@
+/* Main Orrery Settings */
 $viewingAngle:         75deg;
-$verticalOffset:       0%;
-$speedLimit:           5;
+$speedLimit:           50;
 $syncPlanets:          false; /* If true, planets will rotate in sync; Useful for debugging */
 
-/* Main size mods */
+/* Modulate the size of small, medium, and large planets so size delta isn't as dramatic */
 $sizeModSmallest:      0.16;
 $sizeModSmall:         0.35;
 $sizeModLarge:         1.9;
 
-/* Size mods for goo
-$sizeModSmallest:      0.2;
-$sizeModSmall:         0.2;
-$sizeModLarge:         1.25;
-*/
-
 $universeColor:        #fff;
 $planetColor:          #fff;
 $planetShadow:         #303030;
+
 $planetBorderColor:    rgba(255,255,255,0.05);
-$lightSideBorderColor: #000;
 $planetBorder:         1px solid $planetBorderColor;
+
+$lightSideBorderColor: #000;
 $lightSideBorder:      1px solid $lightSideBorderColor;
 
 $orbitColor:           $planetBorderColor;
-// $orbitBorder:          3px solid $orbitColor;
 $orbitBorder:          none;
 
-$symbolColor:          rgba(0,0,0,0.5);
+/* If symbols are showing */
 $symbolColorBG:        rgba(255,255,255,1);
+$symbolColor:          rgba(0,0,0,0.5);
 $symbolColorBorder:    rgba(0,0,0,0.2);
+
+/* Map of planetary data */
+@function planet($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
 
 /** Data from
  ** http://nssdc.gsfc.nasa.gov/planetary/factsheet/

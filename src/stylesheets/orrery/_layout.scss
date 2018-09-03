@@ -1,0 +1,127 @@
+/* Set up sizing and structure of orrery, no look and feel */
+
+/* The .universe is a max width/height container, for adding background effects on top of the starfield on the body */
+.universe {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform:translate3d(0,0,0);
+  pointer-events: none;
+
+  &_container {
+    position: relative;
+    height: 60vh;
+  }
+
+  &.labels-on {
+    .symbol {
+      display: block;
+    }
+  }
+
+  &_cutout {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    svg {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+
+      polygon {
+        fill: white;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &_controls {
+    z-index: 500;
+    top: 72px;
+    left: 24px;
+    position: absolute;
+    display: inline-block;
+    pointer-events: all;
+
+    a {
+      display: block;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      font-weight: 700;
+      line-height: 48px;
+      border: 1px solid white;
+      margin-bottom: 8px;
+      border-radius: 50%;
+      background: transparent;
+      transition: background 0.25s ease-in-out;
+      color: white;
+      font-size: 0.6em;
+
+      &.active,
+      &:hover {
+        background: white;
+        color: black;
+        transition: background 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .pos,
+  .planet,
+  .light-side,
+  .orbit {
+    animation-play-state: paused;
+  }
+
+  &.play {
+    .pos,
+    .planet,
+    .light-side,
+    .orbit {
+      animation-play-state: running;
+    }
+  }
+}
+
+.star-field {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background: white;
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* The .galaxy is a relative positioned parent, meant to stretch inside its parent. */
+.galaxy {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateX($viewingAngle);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}

@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  $(".universe").toggleClass('play');
+  $("#playToggle").toggleClass('active');
+
   $("#playToggle").click( function(e) {
     e.preventDefault();
     $(".universe").toggleClass('play');
