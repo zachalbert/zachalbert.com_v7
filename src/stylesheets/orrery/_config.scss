@@ -1,30 +1,31 @@
 /* Main Orrery Settings */
-$viewingAngle:         75deg;
-$speedLimit:           50;
-$syncPlanets:          false; /* If true, planets will rotate in sync; Useful for debugging */
+$viewingAngle:           75deg;
+$speedLimit:             10;
+$syncPlanets:            false; /* If true, planets will rotate in sync; Useful for debugging */
 
 /* Modulate the size of small, medium, and large planets so size delta isn't as dramatic */
-$sizeModSmallest:      0.16;
-$sizeModSmall:         0.35;
-$sizeModLarge:         1.9;
+$sizeModSmallest:        0.16;
+$sizeModSmall:           0.35;
+$sizeModLarge:           1.9;
 
-$universeColor:        #fff;
-$planetColor:          #fff;
-$planetShadow:         #000;
+$universeColor:          #fff;
+$planetColor:            #fff;
+$planetShadow:           #000;
+$planetCastShadowColor:  rgba(0,0,0,1);
 
-$planetBorderColor:    rgba(255,255,255,0.05);
-$planetBorder:         1px solid $planetBorderColor;
+$planetBorderColor:      rgba(255,255,255,0.05);
+$planetBorder:           1px solid $planetBorderColor;
 
-$lightSideBorderColor: #000;
-$lightSideBorder:      1px solid $lightSideBorderColor;
+$lightSideBorderColor:   #000;
+$lightSideBorder:        1px solid $lightSideBorderColor;
 
-$orbitColor:           $planetBorderColor;
-$orbitBorder:          none;
+$orbitColor:             $planetBorderColor;
+$orbitBorder:            none;
 
 /* If symbols are showing */
-$symbolColorBG:        rgba(255,255,255,1);
-$symbolColor:          rgba(0,0,0,0.5);
-$symbolColorBorder:    rgba(0,0,0,0.2);
+$symbolColorBG:          rgba(255,255,255,1);
+$symbolColor:            rgba(0,0,0,0.5);
+$symbolColorBorder:      rgba(0,0,0,0.2);
 
 /* Map of planetary data */
 @function planet($map, $keys...) {
@@ -64,7 +65,16 @@ $symbolColorBorder:    rgba(0,0,0,0.2);
  ** eris:     0.182em / 0.5;
  **
  ** All starting point offsets are based on the real positions of the planets
- ** as of the day this was made, April 11th, 2017.
+ ** as of the day this was made, April 11th, 2017, with one exception. Jupiter
+ ** and Saturn were really close together, so the 'start' values were changed.
+ **
+ ** Original values:
+ ** Jupiter start: 252deg
+ ** Saturn start: 187.5deg
+ **
+ ** New values:
+ ** Jupiter start: 330deg
+ ** Saturn start: 230deg
  **
 **/
 
@@ -72,7 +82,7 @@ $solarSystem: (
   sun: (
     id: 0,
     name: 'sun',
-    diameter: 12vw / $sizeModLarge
+    diameter: 24vw / $sizeModLarge
   ),
   mercury: (
     id: 1,
@@ -81,8 +91,9 @@ $solarSystem: (
     diameter: 0.383vw / $sizeModSmall,
     symbolOffset: 2.8em,
     speed: 1s * ( 87.97 / $speedLimit),
-    orbitDiameter: 13vw,
-    start: 270deg
+    orbitDiameter: 20vw,
+    // start: 270deg
+    start: 0deg
   ),
   venus: (
     id: 2,
@@ -91,8 +102,9 @@ $solarSystem: (
     diameter: 0.950vw / $sizeModSmall,
     symbolOffset: 3.5em,
     speed: 1s * ( 224.63 / $speedLimit),
-    orbitDiameter: 21vw,
-    start: 237deg
+    orbitDiameter: 28vw,
+    // start: 237deg
+    start: 0deg
   ),
   earth: (
     id: 3,
@@ -101,8 +113,9 @@ $solarSystem: (
     diameter: 1.00vw / $sizeModSmall,
     symbolOffset: 3.5em,
     speed: 1s * ( 365.26 / $speedLimit),
-    orbitDiameter: 29vw,
-    start: 249deg
+    orbitDiameter: 36vw,
+    // start: 249deg
+    start: 0deg
   ),
   mars: (
     id: 4,
@@ -111,8 +124,9 @@ $solarSystem: (
     diameter: 0.532vw / $sizeModSmall,
     symbolOffset: 3.1em,
     speed: 1s * ( 687.05 / $speedLimit),
-    orbitDiameter: 35vw,
-    start: 16.5deg
+    orbitDiameter: 42vw,
+    // start: 16.5deg
+    start: 0deg
   ),
   jupiter: (
     id: 5,
@@ -121,9 +135,9 @@ $solarSystem: (
     diameter: 10.97vw / $sizeModLarge,
     symbolOffset: 4.7em,
     speed: 1s * ( 4331.94 / $speedLimit),
-    orbitDiameter: 51vw,
-    // start: 252deg
-    start: 330deg
+    orbitDiameter: 58vw,
+    // start: 330deg
+    start: 0deg
   ),
   saturn: (
     id: 6,
@@ -132,9 +146,9 @@ $solarSystem: (
     diameter: 9.14vw / $sizeModLarge,
     symbolOffset: 4.4em,
     speed: 1s * ( 10760.45 / $speedLimit),
-    orbitDiameter: 65vw,
-    // start: 187.5deg
-    start: 230deg
+    orbitDiameter: 72vw,
+    // start: 230deg
+    start: 0deg
   ),
   uranus: (
     id: 7,
@@ -143,8 +157,9 @@ $solarSystem: (
     diameter: 3.98vw / $sizeModLarge,
     symbolOffset: 3.3em,
     speed: 1s * ( 30685.19 / $speedLimit),
-    orbitDiameter: 74vw,
-    start: 65.5deg
+    orbitDiameter: 80vw,
+    // start: 65.5deg
+    start: 0deg
   ),
   neptune: (
     id: 8,
@@ -153,8 +168,9 @@ $solarSystem: (
     diameter: 3.86vw / $sizeModLarge,
     symbolOffset: 3.3em,
     speed: 1s * ( 60194.25 / $speedLimit),
-    orbitDiameter: 85vw,
-    start: 108deg
+    orbitDiameter: 88.5vw,
+    // start: 108deg
+    start: 0deg
   ),
   pluto: (
     id: 9,
@@ -164,6 +180,7 @@ $solarSystem: (
     symbolOffset: 2.8em,
     speed: 1s * ( 90620.10 / $speedLimit),
     orbitDiameter: 95vw,
-    start: 160deg
+    // start: 160deg
+    start: 0deg
   )
 );

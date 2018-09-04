@@ -38,8 +38,8 @@
         margin-left: -($orbitDiameter / 2);
 
         &:after {
-          width: $diameter;
-          height: $diameter;
+          width: $diameter * 0.85;
+          height: $diameter * 1.35;
         }
       }
 
@@ -54,7 +54,7 @@
       }
 
       .symbol {
-        top: -8vw + ( $diameter / 2 );
+        top: -2.5em;
       }
     }
   }
@@ -139,7 +139,7 @@
 }
 
 .sun .symbol {
-  margin-top: 0.5em;
+  margin-top: ( planet( $solarSystem, sun, diameter ) ) / 3.25;
   border: none;
 
   &:before,

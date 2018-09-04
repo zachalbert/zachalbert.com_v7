@@ -47,22 +47,23 @@
   .pos {
     position: absolute;
     left: 50%;
+    width: 1px;
     transform-style: preserve-3d;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
 
+  /* Cast shadows from planet */
   &:after {
     content: '';
     display: block;
     width: 20px;
     height: 20px;
-    background: rgba(0,0,0,0.15);
+    background: $planetCastShadowColor;
     position: relative;
     border-radius: 50%;
-    top: -0.0em;
     left: 50%;
-    transform: translateZ(-1.5em);
-    margin-left: -0.5em;
+    margin-left: 0em;
+    transform: translate3d(-0.5em,-50px,-42px)
   }
 }
