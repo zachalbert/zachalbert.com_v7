@@ -1,49 +1,39 @@
 /* The positioning of the shadow on the planet. 0%/100% are the furthest away, 25% left, 50% closest, 75% right */
-@mixin lightStates($diameter, $night) {
-  $nightRadius: $night / 2;
-
-  $sunDown:    50% - $nightRadius;
-  $firstDark:  50% - ($nightRadius / 2);
-
-  $sunUp:      50% + $nightRadius;
-  $firstLight: 50% + ($nightRadius / 2);
+@mixin lightStates( $diameter ) {
 
   /* 0% begins behind the sun */
   0% {
-    transform: translate(0, ( $diameter / 50 ) ) scale( 1, 1 );
+    transform: translate( 0, ( $diameter / 30 ) ) scale( 1, 1 );
+  }
+  15% {
+    transform: translate( ( $diameter / 15 ), ( $diameter / 25 ) ) scale( 0.9, 1.3 );
   }
   25% {
-    transform: translate( ( $diameter / 5 ), ( $diameter / 25 ) ) scale( 0.9, 0.9 );
+    transform: translate( ( $diameter / 4 ), 0 ) scale( 0.5, 3 );
   }
-  #{$sunDown} {
-    transform: translate( ( $diameter / 2 ), ( -$diameter / 20 ) ) scale( 0.8, 0.8 );
+  40% {
+    transform: translate( 0, 0 ) scale( 1.2, 1.2 );
   }
-  #{$firstDark} {
-    transform: translate( ( $diameter ), ( -$diameter / 3 ) ) scale( 0.75, 0.75 );
-  }
-  50% {
-    transform: translate( 0, ( -$diameter * 1.5 ) ) scale( 1, 1 );
-  }
-  #{$firstLight} {
-    transform: translate( ( -$diameter ), ( -$diameter / 3 ) ) scale( 0.75, 0.75 );
-  }
-  #{$sunUp} {
-    transform: translate( ( -$diameter / 2 ), ( -$diameter / 20 ) ) scale( 0.8, 0.8 );
+  60% {
+    transform: translate( 0, 0 ) scale( 1.2, 1.2 );
   }
   75% {
-    transform: translate( ( -$diameter / 5 ), ( $diameter / 25 ) ) scale( 0.9, 0.9 );
+    transform: translate( ( -$diameter / 4 ), 0 ) scale( 0.5, 3 );
+  }
+  85% {
+    transform: translate( ( -$diameter / 15 ), ( $diameter / 25 ) ) scale( 0.9, 1.3 );
   }
   100% {
-    transform: translate( 0, ( $diameter / 50 ) ) scale( 1, 1 );
+    transform: translate( 0, ( $diameter / 30 ) ) scale( 1, 1 );
   }
 }
 
-@keyframes light-mercury { @include lightStates( planet( $solarSystem, mercury, diameter ), planet( $solarSystem, mercury, night )); }
-@keyframes light-venus   { @include lightStates( planet( $solarSystem, venus, diameter ),   planet( $solarSystem, venus, night )); }
-@keyframes light-earth   { @include lightStates( planet( $solarSystem, earth, diameter ),   planet( $solarSystem, earth, night )); }
-@keyframes light-mars    { @include lightStates( planet( $solarSystem, mars, diameter ),    planet( $solarSystem, mars, night )); }
-@keyframes light-jupiter { @include lightStates( planet( $solarSystem, jupiter, diameter ), planet( $solarSystem, jupiter, night )); }
-@keyframes light-saturn  { @include lightStates( planet( $solarSystem, saturn, diameter ),  planet( $solarSystem, saturn, night )); }
-@keyframes light-uranus  { @include lightStates( planet( $solarSystem, uranus, diameter ),  planet( $solarSystem, uranus, night )); }
-@keyframes light-neptune { @include lightStates( planet( $solarSystem, neptune, diameter ), planet( $solarSystem, neptune, night )); }
-@keyframes light-pluto   { @include lightStates( planet( $solarSystem, pluto, diameter ),   planet( $solarSystem, pluto, night )); }
+@keyframes light-mercury { @include lightStates( planet( $solarSystem, mercury, diameter ) ); }
+@keyframes light-venus   { @include lightStates( planet( $solarSystem, venus, diameter ) ); }
+@keyframes light-earth   { @include lightStates( planet( $solarSystem, earth, diameter ) ); }
+@keyframes light-mars    { @include lightStates( planet( $solarSystem, mars, diameter ) ); }
+@keyframes light-jupiter { @include lightStates( planet( $solarSystem, jupiter, diameter ) ); }
+@keyframes light-saturn  { @include lightStates( planet( $solarSystem, saturn, diameter ) ); }
+@keyframes light-uranus  { @include lightStates( planet( $solarSystem, uranus, diameter ) ); }
+@keyframes light-neptune { @include lightStates( planet( $solarSystem, neptune, diameter ) ); }
+@keyframes light-pluto   { @include lightStates( planet( $solarSystem, pluto, diameter ) ); }

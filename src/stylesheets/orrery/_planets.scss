@@ -51,6 +51,12 @@
           animation-duration: $orbitSpeed;
           animation-delay: $delay;
         }
+
+        .dark-side {
+          animation-name: dark-#{$planet};
+          animation-duration: $orbitSpeed;
+          animation-delay: $delay;
+        }
       }
 
       .symbol {
@@ -87,10 +93,20 @@
     height: 100%;
     border-radius: 50%;
     position: absolute;
-    // top: 10px;
-    // left: 10px;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    transform-style: preserve-3d;
+  }
+
+  .dark-side {
+    background: $planetShadow;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;
   }
 }
 

@@ -13,11 +13,6 @@ $planetColor:            #fff;
 $planetShadow:           #000;
 $planetCastShadowColor:  rgba(0,0,0,1);
 
-/* dev */
-// $planetColor: red;
-// $planetShadow: magenta;
-// $planetCastShadowColor: rgba(180,225,60,0.5);
-
 $planetBorderColor:      rgba(255,255,255,0.05);
 $planetBorder:           1px solid $planetBorderColor;
 
@@ -97,8 +92,8 @@ $solarSystem: (
     symbolOffset: 2.8em,
     speed: 1s * ( 87.97 / $speedLimit),
     orbitDiameter: 20vw,
-    // start: 270deg
-    start: 0deg
+    start: 270deg
+    // start: 0deg
   ),
   venus: (
     id: 2,
@@ -108,8 +103,8 @@ $solarSystem: (
     symbolOffset: 3.5em,
     speed: 1s * ( 224.63 / $speedLimit),
     orbitDiameter: 28vw,
-    // start: 237deg
-    start: 0deg
+    start: 237deg
+    // start: 0deg
   ),
   earth: (
     id: 3,
@@ -119,8 +114,8 @@ $solarSystem: (
     symbolOffset: 3.5em,
     speed: 1s * ( 365.26 / $speedLimit),
     orbitDiameter: 36vw,
-    // start: 249deg
-    start: 0deg
+    start: 249deg
+    // start: 0deg
   ),
   mars: (
     id: 4,
@@ -130,8 +125,8 @@ $solarSystem: (
     symbolOffset: 3.1em,
     speed: 1s * ( 687.05 / $speedLimit),
     orbitDiameter: 42vw,
-    // start: 16.5deg
-    start: 0deg
+    start: 16.5deg
+    // start: 0deg
   ),
   jupiter: (
     id: 5,
@@ -141,8 +136,8 @@ $solarSystem: (
     symbolOffset: 4.7em,
     speed: 1s * ( 4331.94 / $speedLimit),
     orbitDiameter: 58vw,
-    // start: 330deg
-    start: 0deg
+    start: 330deg
+    // start: 0deg
   ),
   saturn: (
     id: 6,
@@ -152,8 +147,8 @@ $solarSystem: (
     symbolOffset: 4.4em,
     speed: 1s * ( 10760.45 / $speedLimit),
     orbitDiameter: 72vw,
-    // start: 230deg
-    start: 0deg
+    start: 230deg
+    // start: 0deg
   ),
   uranus: (
     id: 7,
@@ -163,8 +158,8 @@ $solarSystem: (
     symbolOffset: 3.3em,
     speed: 1s * ( 30685.19 / $speedLimit),
     orbitDiameter: 80vw,
-    // start: 65.5deg
-    start: 0deg
+    start: 65.5deg
+    // start: 0deg
   ),
   neptune: (
     id: 8,
@@ -174,8 +169,8 @@ $solarSystem: (
     symbolOffset: 3.3em,
     speed: 1s * ( 60194.25 / $speedLimit),
     orbitDiameter: 88.5vw,
-    // start: 108deg
-    start: 0deg
+    start: 108deg
+    // start: 0deg
   ),
   pluto: (
     id: 9,
@@ -185,7 +180,7 @@ $solarSystem: (
     symbolOffset: 2.8em,
     speed: 1s * ( 90620.10 / $speedLimit),
     orbitDiameter: 95vw,
-    // start: 160deg
-    start: 0deg
+    start: 160deg
+    // start: 0deg
   )
 );

@@ -82,6 +82,7 @@
   .pos,
   .planet,
   .light-side,
+  .dark-side,
   .orbit {
     animation-play-state: paused;
   }
@@ -90,6 +91,7 @@
     .pos,
     .planet,
     .light-side,
+    .dark-side,
     .orbit {
       animation-play-state: running;
     }
