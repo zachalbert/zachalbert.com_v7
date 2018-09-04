@@ -71,6 +71,7 @@
   background-color: $planetShadow;
   border: $planetBorder;
   overflow: hidden;
+  transform-style: preserve-3d;
 
   &.sun {
     background-color: $planetColor;
@@ -86,8 +87,8 @@
     height: 100%;
     border-radius: 50%;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    // top: 10px;
+    // left: 10px;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }

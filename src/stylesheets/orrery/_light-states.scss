@@ -8,59 +8,36 @@
   $sunUp:      50% + $nightRadius;
   $firstLight: 50% + ($nightRadius / 2);
 
-  /* Begins behind the sun */
+  /* 0% begins behind the sun */
   0% {
-    left: 0px;
-    top: ( $diameter / 50 );
-    width: 100%;
-    height: 100%;
+    transform: translate(0, ( $diameter / 50 ) ) scale( 1, 1 );
   }
   25% {
-    left: ( $diameter / 5 );
-    top: $diameter / 25;
-    width: 90%;
-    height: 90%;
+    transform: translate( ( $diameter / 5 ), ( $diameter / 25 ) ) scale( 0.9, 0.9 );
   }
   #{$sunDown} {
-    left: ( $diameter / 2 );
-    top: ( -$diameter / 20 );
-    width: 80%;
-    height: 80%;
+    transform: translate( ( $diameter / 2 ), ( -$diameter / 20 ) ) scale( 0.8, 0.8 );
   }
   #{$firstDark} {
-    left: ( $diameter );
-    top: ( -$diameter / 3 );
-    width: 75%;
-    height: 75%;
+    transform: translate( ( $diameter ), ( -$diameter / 3 ) ) scale( 0.75, 0.75 );
   }
   50% {
-    top: -$diameter * 1.5;
+    transform: translate( 0, ( -$diameter * 1.5 ) ) scale( 1, 1 );
   }
   #{$firstLight} {
-    left: ( -$diameter );
-    top: ( -$diameter / 3 );
-    width: 75%;
-    height: 75%;
+    transform: translate( ( -$diameter ), ( -$diameter / 3 ) ) scale( 0.75, 0.75 );
   }
   #{$sunUp} {
-    left: ( -$diameter / 2 );
-    top: ( -$diameter / 20 );
-    width: 80%;
-    height: 80%;
+    transform: translate( ( -$diameter / 2 ), ( -$diameter / 20 ) ) scale( 0.8, 0.8 );
   }
   75% {
-    left: ( -$diameter / 5 );
-    top: $diameter / 25;
-    width: 90%;
-    height: 90%;
+    transform: translate( ( -$diameter / 5 ), ( $diameter / 25 ) ) scale( 0.9, 0.9 );
   }
   100% {
-    left: 0;
-    top: ( $diameter / 50 );
-    width: 100%;
-    height: 100%;
+    transform: translate( 0, ( $diameter / 50 ) ) scale( 1, 1 );
   }
 }
+
 @keyframes light-mercury { @include lightStates( planet( $solarSystem, mercury, diameter ), planet( $solarSystem, mercury, night )); }
 @keyframes light-venus   { @include lightStates( planet( $solarSystem, venus, diameter ),   planet( $solarSystem, venus, night )); }
 @keyframes light-earth   { @include lightStates( planet( $solarSystem, earth, diameter ),   planet( $solarSystem, earth, night )); }

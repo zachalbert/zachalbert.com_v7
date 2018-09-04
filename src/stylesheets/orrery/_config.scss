@@ -13,6 +13,11 @@ $planetColor:            #fff;
 $planetShadow:           #000;
 $planetCastShadowColor:  rgba(0,0,0,1);
 
+/* dev */
+// $planetColor: red;
+// $planetShadow: magenta;
+// $planetCastShadowColor: rgba(180,225,60,0.5);
+
 $planetBorderColor:      rgba(255,255,255,0.05);
 $planetBorder:           1px solid $planetBorderColor;
 
