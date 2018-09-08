@@ -1,0 +1,65 @@
+/* If using self-hosted webfonts */
+@import "fontface";
+
+/* Sizing */
+$base-font-size: 24px;
+$base-line-height: 1.61804;
+
+/* Fonts */
+$font-stack-body:     'Cormorant', Georgia, Times, serif;
+$font-stack-header:  'CormorantSC', Georgia, Times, serif;
+$font-stack-special: 'CormorantUnicase', Georgia, Times, serif;
+
+/* Type Scale */
+.h1      { line-height: $base-line-height; font-size: $base-font-size * $base-line-height * $base-line-height * $base-line-height; }
+.h2      { line-height: $base-line-height; font-size: $base-font-size * $base-line-height * $base-line-height; }
+.h3      { line-height: $base-line-height; font-size: $base-font-size * $base-line-height; }
+.h4      { line-height: $base-line-height; font-size: $base-font-size; }
+.h5      { line-height: $base-line-height; font-size: $base-font-size; }
+.h6      { line-height: $base-line-height; font-size: $base-font-size; }
+.body    { line-height: $base-line-height; font-size: $base-font-size; }
+.small   { line-height: $base-line-height; font-size: $base-font-size * ($base-line-height * 0.75); }
+
+h1 { @extend .h1; }
+h2 { @extend .h2; }
+h3 { @extend .h3; }
+h4 { @extend .h4; }
+h5 { @extend .h5; }
+h6 { @extend .h6; }
+body { @extend .body; }
+small, caption { @extend .small; }
+
+body {
+  font-family: $font-stack-body;
+	font-variant-ligatures: common-ligatures;
+	color: $base-color-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-stack-header;
+	text-transform: lowercase;
+	margin: 0 0 1em;
+	font-variant-ligatures: discretionary-ligatures;
+}
+
+.page-title {
+  font-family: $font-stack-special;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	border-bottom: 1px solid #b3b3b3;
+	padding: 0.5em 0;
+}
+
+.site-title a, nav.main a {
+	display: inline-block;
+  font-family: 'CormorantSC', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  font-size: 24px;
+	line-height: 32px;
+	margin: 0;
+	padding: 0.5em;
+  color: white;
+  border-bottom: 0;
+	text-transform: lowercase;
+}

@@ -3,16 +3,16 @@
 /* Loop through all the planets and initialize them */
 @each $planet, $props in $solarSystem {
   @if( $planet != 'sun' ) {
-    $i:             planet( $solarSystem, #{$planet}, id );
+    $i:               planet( $solarSystem, #{$planet}, id );
 
-    $diameter:      planet( $solarSystem, #{$planet}, diameter );
-    $symbolOffset:  planet( $solarSystem, #{$planet}, symbolOffset );
-    $orbitDiameter: planet( $solarSystem, #{$planet}, orbitDiameter );
-    $orbitSpeed:    planet( $solarSystem, #{$planet}, speed );
+    $diameter:        planet( $solarSystem, #{$planet}, diameter );
+    $symbolOffset:    planet( $solarSystem, #{$planet}, symbolOffset );
+    $orbitDiameter:   planet( $solarSystem, #{$planet}, orbitDiameter );
+    $orbitSpeed:      planet( $solarSystem, #{$planet}, speed );
 
-    $startOffset:   planet( $solarSystem, #{$planet}, start );
-    $offset:        $startOffset / 360deg;
-    $delay:         -($orbitSpeed - ($orbitSpeed * $offset));
+    $startOffset:     planet( $solarSystem, #{$planet}, start );
+    $offset:          $startOffset / 360deg;
+    $delay:           -($orbitSpeed - ($orbitSpeed * $offset));
 
     @if $syncPlanets == true {
       $orbitSpeed: 20s; /* Sync orbital periods, for dev purposes */

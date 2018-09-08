@@ -1,30 +1,64 @@
 $(document).ready(function() {
 
-  $(".universe").toggleClass('play');
-  $("#playToggle").toggleClass('active');
+  universePlay();
 
-  $("#playToggle").click( function(e) {
+  $('#toggle-pause').click( function(e) {
     e.preventDefault();
-    $(".universe").toggleClass('play');
-    $(this).toggleClass('active');
-  });
+    universePause();
+  })
 
-  $('#labelToggle').click( function(e) {
+  $('#toggle-play').click( function(e) {
     e.preventDefault();
+    universePlay();
+  })
+
+  $('#toggle-fast').click( function(e) {
+    e.preventDefault();
+    universeFast();
+  })
+
+  $('#toggle-labels').click( function(e) {
+    e.preventDefault();
+    toggleLabels();
+  })
+
+  $('#toggle-pluto').click( function(e) {
+    e.preventDefault();
+    togglePluto();
+  })
+
+  function universePlay() {
+    $('.universe').removeClass('pause fast');
+    $('.universe').addClass('play');
+
+    $('.universe-controls_player').removeClass('active');
+    $('.control-play').addClass('active');
+  }
+
+  function universePause() {
+    $('.universe').removeClass('play fast');
+    $('.universe').addClass('pause');
+
+    $('.universe-controls_player').removeClass('active');
+    $('.control-pause').addClass('active');
+  }
+
+  function universeFast() {
+    $('.universe').removeClass('pause');
+    $('.universe').addClass('play fast');
+
+    $('.universe-controls_player').removeClass('active');
+    $('.control-fast').addClass('active');
+  }
+
+  function toggleLabels() {
     $('.universe').toggleClass('labels-on');
-    $(this).toggleClass('active');
-  });
 
-  $('#plutoToggle').click( function(e) {
-    e.preventDefault();
+    $('.control-labels').toggleClass('active');
+  }
+
+  function togglePluto() {
     $('.pluto').toggle();
-    $(this).toggleClass('active');
-  });
-
-  $('#gridToggle').click( function(e) {
-    e.preventDefault();
-    $('body').toggleClass('row-grid-show');
-    $(this).toggleClass('active');
-  });
+  }
 
 });

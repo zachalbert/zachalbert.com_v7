@@ -1,6 +1,6 @@
 /* Main Orrery Settings */
 $viewingAngle:           75deg;
-$speedLimit:             10;
+$speedLimit:             8;
 $syncPlanets:            false; /* If true, planets will rotate in sync; Useful for debugging */
 
 /* Modulate the size of small, medium, and large planets so size delta isn't as dramatic */
@@ -10,13 +10,13 @@ $sizeModLarge:           1.9;
 
 $universeColor:          #fff;
 $planetColor:            #fff;
-$planetShadow:           #000;
-$planetCastShadowColor:  rgba(0,0,0,1);
+$planetShadow:           $base-color-dark;
+$planetCastShadowColor:  $planetShadow;
 
 $planetBorderColor:      rgba(255,255,255,0.05);
 $planetBorder:           1px solid $planetBorderColor;
 
-$lightSideBorderColor:   #000;
+$lightSideBorderColor:   #244B54;
 $lightSideBorder:        1px solid $lightSideBorderColor;
 
 $orbitColor:             $planetBorderColor;
@@ -24,8 +24,8 @@ $orbitBorder:            none;
 
 /* If symbols are showing */
 $symbolColorBG:          rgba(255,255,255,1);
-$symbolColor:            rgba(0,0,0,0.5);
-$symbolColorBorder:      rgba(0,0,0,0.2);
+$symbolColor:            #244B54;
+$symbolColorBorder:      #244B54;
 
 /* Map of planetary data */
 @function planet($map, $keys...) {

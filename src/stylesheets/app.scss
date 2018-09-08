@@ -8,11 +8,14 @@
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/bootstrap-grid";
 
+@import "config/main";
+
+/* Orrery */
+@import "orrery/main";
+
 /* Main stuff */
 @import "base/defaults";
 @import "base/mixins";
-
-@import "config/main";
 
 @import "layout/typography";
 @import "layout/layout";
@@ -20,5 +23,3 @@
 @import "main";
 
 @import "components/header";
-
-@import "orrery/main";

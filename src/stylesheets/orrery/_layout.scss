@@ -39,43 +39,29 @@
       width: 100%;
       height: 100%;
 
-      polygon {
-        fill: white;
+      polygon,
+      path {
         position: absolute;
         left: 0;
         top: 0;
+        width: 100%;
       }
-    }
-  }
 
-  &_controls {
-    z-index: 500;
-    top: 72px;
-    left: 24px;
-    position: absolute;
-    display: inline-block;
-    pointer-events: all;
+      #galaxy-edge   {
+        fill: white;
+        transform: translateY(60px);
+      }
 
-    a {
-      display: block;
-      width: 48px;
-      height: 48px;
-      text-align: center;
-      font-weight: 700;
-      line-height: 48px;
-      border: 1px solid white;
-      margin-bottom: 8px;
-      border-radius: 50%;
-      background: transparent;
-      transition: background 0.25s ease-in-out;
-      color: white;
-      font-size: 0.6em;
+      #galaxy-edge-2 {
+        fill: rgba(101, 234, 255, 0.3);
+        mix-blend-mode: overlay;
+        transform: translateY(30px);
+      }
 
-      &.active,
-      &:hover {
-        background: white;
-        color: black;
-        transition: background 0.2s ease-in-out;
+      #galaxy-edge-3 {
+        fill: rgba(81, 159, 255, 0.32);
+        mix-blend-mode: overlay;
+        transform: translateY(0px);
       }
     }
   }

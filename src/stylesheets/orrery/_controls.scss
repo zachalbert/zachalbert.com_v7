@@ -1,0 +1,74 @@
+.universe-controls {
+  font-size: 0;
+
+  a {
+    font-size: $base-font-size;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    box-sizing: content-box;
+    padding: 0.5em;
+    display: inline-block;
+    opacity: 0.35;
+    margin-top: 0.5em;
+    border: 1px solid rgba(255,255,255, 0.5);
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.control {
+  &-pause {
+    background-image: url('../images/icon-pause.svg');
+  }
+
+  &-play {
+    background-image: url('../images/icon-play.svg');
+  }
+
+  &-fast {
+    background-image: url('../images/icon-fast.svg');
+  }
+
+  &-labels {
+    background-image: url('../images/icon-info.svg');
+  }
+}
+//
+// &_controls {
+//   z-index: 500;
+//   top: 72px;
+//   left: 24px;
+//   position: absolute;
+//   display: inline-block;
+//   pointer-events: all;
+//
+//   a {
+//     display: block;
+//     width: 48px;
+//     height: 48px;
+//     text-align: center;
+//     font-weight: 700;
+//     line-height: 48px;
+//     border: 1px solid white;
+//     margin-bottom: 8px;
+//     border-radius: 50%;
+//     background: transparent;
+//     transition: background 0.25s ease-in-out;
+//     color: white;
+//     font-size: 0.6em;
+//
+//     &.active,
+//     &:hover {
+//       background: white;
+//       color: black;
+//       transition: background 0.2s ease-in-out;
+//     }
+//   }
