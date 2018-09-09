@@ -50,17 +50,16 @@
       #galaxy-edge   {
         fill: white;
         transform: translateY(100px);
+        filter: drop-shadow( 6px 0 2px hsla(0, 0%, 0%, 0.2));
       }
 
       #galaxy-edge-2 {
-        fill: rgba(101, 234, 255, 0.3);
-        mix-blend-mode: overlay;
+        fill: rgba(101, 234, 255, 0.15);
         transform: translateY(50px);
       }
 
       #galaxy-edge-3 {
-        fill: rgba(81, 159, 255, 0.32);
-        mix-blend-mode: overlay;
+        fill: rgba(208, 159, 255, 0.2);
         transform: translateY(0px);
       }
     }

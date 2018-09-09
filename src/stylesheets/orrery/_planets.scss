@@ -105,6 +105,7 @@
 
   &.sun {
     background-color: $planetColor;
+    border: none;
     font-size: planet($solarSystem, sun, diameter);
     transform: rotateX(-$viewingAngle);
     top: 50%;
