@@ -14,6 +14,14 @@
     margin-top: 0.5em;
     border: 1px solid rgba(255,255,255, 0.5);
 
+    &:first-child {
+      border-radius: 50% 0 0 50%;
+    }
+
+    &:last-child {
+      border-radius: 0 50% 50% 0;
+    }
+
     &:hover {
       opacity: 0.5;
     }
@@ -41,34 +49,3 @@
     background-image: url('../images/icon-info.svg');
   }
 }
-//
-// &_controls {
-//   z-index: 500;
-//   top: 72px;
-//   left: 24px;
-//   position: absolute;
-//   display: inline-block;
-//   pointer-events: all;
-//
-//   a {
-//     display: block;
-//     width: 48px;
-//     height: 48px;
-//     text-align: center;
-//     font-weight: 700;
-//     line-height: 48px;
-//     border: 1px solid white;
-//     margin-bottom: 8px;
-//     border-radius: 50%;
-//     background: transparent;
-//     transition: background 0.25s ease-in-out;
-//     color: white;
-//     font-size: 0.6em;
-//
-//     &.active,
-//     &:hover {
-//       background: white;
-//       color: black;
-//       transition: background 0.2s ease-in-out;
-//     }
-//   }

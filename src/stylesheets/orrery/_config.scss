@@ -1,6 +1,6 @@
 /* Main Orrery Settings */
 $viewingAngle:           75deg;
-$speedLimit:             8;
+$speedLimit:             30;
 $syncPlanets:            false; /* If true, planets will rotate in sync; Useful for debugging */
 
 /* Modulate the size of small, medium, and large planets so size delta isn't as dramatic */
@@ -14,7 +14,7 @@ $planetShadow:           $base-color-dark;
 $planetCastShadowColor:  $planetShadow;
 
 $planetBorderColor:      rgba(255,255,255,0.05);
-$planetBorder:           1px solid $planetBorderColor;
+$planetBorder:           2px solid $planetBorderColor;
 
 $lightSideBorderColor:   #244B54;
 $lightSideBorder:        1px solid $lightSideBorderColor;

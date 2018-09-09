@@ -1,46 +1,43 @@
 /* The positioning of the shadow on the planet. 0%/100% are the furthest away, 25% left, 50% closest, 75% right */
+
 @mixin darkStates( $diameter ) {
 
-  /* 0% begins behind the sun */
   0% {
-    transform: translate( 0, ( $diameter ) ) scale( 0.1, 0.1 );
+    transform: scale(.01);
   }
+
   10% {
-    transform: translate( ( -$diameter ), ( -$diameter / 30 ) ) scale( 0.2, 1 );
+    transform: scale(.01);
   }
+
   25% {
-    transform: translate( 0, ( -$diameter / 30 ) ) scale( 0.3, 3 );
+    transform: scale(1);
   }
-  30% {
-    transform: translate( 0, ( -$diameter / 30 ) ) scale( 0.5, 1.5 );
-  }
+
   35% {
-    transform: translate( ( -$diameter / 6 ), ( $diameter / 10 ) ) scale( 0.75, 1.25 );
+    transform: scale(1.1);
   }
-  45% {
-    transform: translate( ( -$diameter / 15 ), ( $diameter / 10 ) ) scale( 0.95, 0.95 );
-  }
+
   50% {
-    transform: translate( 0, ( $diameter / 10 ) ) scale( 0.97, 0.97 );
+    transform: scale(1.8);
   }
-  55% {
-    transform: translate( ( $diameter / 15 ), ( $diameter / 10 ) ) scale( 0.95, 0.95 );
-  }
+
   65% {
-    transform: translate( ( $diameter / 6 ), ( $diameter / 10 ) ) scale( 0.75, 1.25 );
+    transform: scale(1.1);
   }
-  70% {
-    transform: translate( 0, ( $diameter / 30 ) ) scale( 0.5, 1.5 );
-  }
+
   75% {
-    transform: translate( 0, ( $diameter / 30 ) ) scale( 0.3, 3 );
+    transform: scale(1);
   }
+
   90% {
-    transform: translate( ( $diameter ), ( -$diameter / 30 ) ) scale( 0.2, 1 );
+    transform: scale(.01);
   }
+
   100% {
-    transform: translate( 0, ( $diameter ) ) scale( 0.1, 0.1 );
+    transform: scale(.01);
   }
+
 }
 
 @keyframes dark-mercury { @include darkStates( planet( $solarSystem, mercury, diameter ) ); }

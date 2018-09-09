@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  /* Behavior onLoad */
   universePlay();
 
   $('#toggle-pause').click( function(e) {

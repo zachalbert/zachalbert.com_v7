@@ -45,6 +45,11 @@
 
       .planet {
         font-size: $diameter;
+        animation-name: lighting;
+        animation-duration: $orbitSpeed;
+        animation-delay: $delay;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
 
         .light-side {
           animation-name: light-#{$planet};
@@ -56,6 +61,25 @@
           animation-name: dark-#{$planet};
           animation-duration: $orbitSpeed;
           animation-delay: $delay;
+        }
+
+        .lighting {
+          width: 100%;
+          height: 100%;
+
+          circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+
+          &.dark circle {
+            fill: purple;
+          }
+
+          &.light circle {
+            fill: cyan;
+          }
         }
       }
 
@@ -93,6 +117,7 @@
     height: 100%;
     border-radius: 50%;
     position: absolute;
+    left: 50%;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform-style: preserve-3d;
@@ -104,6 +129,7 @@
     height: 100%;
     border-radius: 50%;
     position: absolute;
+    left: -50%;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform-style: preserve-3d;

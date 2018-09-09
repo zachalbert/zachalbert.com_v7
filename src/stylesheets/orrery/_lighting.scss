@@ -1,0 +1,31 @@
+@keyframes lighting {
+
+  0% {
+    transform: rotate(90deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(-50deg);
+  }
+
+  50% {
+    transform: rotate(-90deg);
+  }
+
+  60% {
+    transform: rotate(-130deg);
+  }
+
+  80% {
+    transform: rotate(-190deg);
+  }
+
+  100% {
+    transform: rotate(-270deg);
+  }
+
+}
