@@ -5,3 +5,18 @@ $row-grid-color-dark: rgba(0,0,0,0.05);
 $row-grid-color-light: rgba(255,255,255,0.1);
 
 $nav-height: 56px;
+
+$lead: $base-font-size * $base-line-height;
+
+$lead-quarter: $lead / 4;
+$lead-half: $lead / 2;
+$lead-1: $lead;
+$lead-2: $lead * 2;
+$lead-3: $lead * 3;
+$lead-4: $lead * 4;
+$lead-5: $lead * 5;
+$lead-6: $lead * 6;
+$lead-7: $lead * 7;
+$lead-8: $lead * 8;
+$lead-9: $lead * 9;
+$lead-10: $lead * 10;

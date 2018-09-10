@@ -4,12 +4,40 @@ nav.main {
 
 .site-title {
   margin: 0;
+  font-size: $font-size-h3;
+  line-height: $lead-1;
 
   a {
-    font-size: 2rem;
+    font-weight: 700;
 
     @include media-breakpoint-up(sm) {
-      font-size: 1rem;
+      font-size: $font-size-body;
+      font-weight: 400;
     }
   }
 }
+
+a.nav-link {
+  @extend .small-caps-header;
+  color: white;
+  text-transform: lowercase;
+  font-size: $font-size-body;
+  display: block;
+  line-height: $lead-1;
+  padding: 0.5em;
+}
+
+
+// .site-title a, nav.main a {
+// 	display: block;
+//   font-family: 'CormorantSC', Georgia, serif;
+//   font-weight: 500;
+//   letter-spacing: 0.08em;
+//   font-size: 24px;
+// 	line-height: 32px;
+// 	margin: 0;
+// 	padding: 0.5em;
+//   color: white;
+//   // border-bottom: 0;
+// 	text-transform: lowercase;
+// }
