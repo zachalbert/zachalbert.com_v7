@@ -1,0 +1,15 @@
+nav.main {
+  padding: 1em;
+}
+
+.site-title {
+  margin: 0;
+
+  a {
+    font-size: 2rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1rem;
+    }
+  }
+}

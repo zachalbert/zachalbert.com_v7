@@ -9,8 +9,8 @@
     {% for planet, symbol in planets %}
       <div class="{{ planet }} orbit">
         <div class="pos">
-          <div class="symbol">{{ symbol }}</div>
-          <div class="planet">
+          <div class="symbol" title="{{ symbol }}: {{ planet }}">{{ symbol }}</div>
+          <div class="planet" title="{{ planet }}">
             <div class="light-side"></div>
             <div class="dark-side"></div>
           </div>

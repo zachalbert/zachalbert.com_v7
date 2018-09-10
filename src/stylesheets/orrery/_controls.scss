@@ -9,17 +9,22 @@
     height: 32px;
     box-sizing: content-box;
     padding: 0.5em;
-    display: inline-block;
+    display: inline-block !important;
     opacity: 0.35;
-    margin-top: 0.5em;
     border: 1px solid rgba(255,255,255, 0.5);
+
+    &.active {
+      background-color: rgba(255,255,255,0.1);
+    }
 
     &:first-child {
       border-radius: 50% 0 0 50%;
+      margin-right: -1px;
     }
 
     &:last-child {
       border-radius: 0 50% 50% 0;
+      margin-left: -1px;
     }
 
     &:hover {

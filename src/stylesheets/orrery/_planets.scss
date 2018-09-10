@@ -143,10 +143,10 @@
   color: $symbolColor;
   position: absolute;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1em;
   left: 50%;
   background: $symbolColorBG;
-  border: 1px solid $symbolColorBorder;
+  border: 2px solid $symbolColorBorder;
   padding: 0.2em 0;
   line-height: 1;
   width: 1.5em;
@@ -165,7 +165,7 @@
     height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 5px solid $symbolColorBorder;
+    border-top: 6px solid $symbolColorBorder;
   }
   &:after {
     content: '';
@@ -185,6 +185,7 @@
 .sun .symbol {
   margin-top: ( planet( $solarSystem, sun, diameter ) ) / 3.25;
   border: none;
+  font-size: 1.5rem;
 
   &:before,
   &:after {

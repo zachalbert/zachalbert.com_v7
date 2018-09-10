@@ -25,17 +25,20 @@ $(document).ready(function() {
 
   $('#toggle-pause').click( function(e) {
     e.preventDefault();
-    universePause();
+    if( $('.universe').hasClass('pause') ) {
+      universePlay();
+    } else {
+      universePause();
+    }
   })
 
   $('#toggle-play').click( function(e) {
     e.preventDefault();
-    universePlay();
-  })
-
-  $('#toggle-fast').click( function(e) {
-    e.preventDefault();
-    universeFast();
+    if( $('.universe').hasClass('play') ) {
+      universePause();
+    } else {
+      universePlay();
+    }
   })
 
   $('#toggle-labels').click( function(e) {
