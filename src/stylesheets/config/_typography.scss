@@ -53,11 +53,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-title {
-  font-family: $font-stack-special;
-	font-weight: 500;
-	letter-spacing: 0.08em;
+  @extend .h2;
+  font-weight: 400;
+  line-height: $base-line-height;
+  font-family: $font-stack-body;
+  text-transform: capitalize;
 	border-bottom: 1px solid #b3b3b3;
-	padding: 0.5em 0;
+  font-style: italic;
+  padding: 2em 0;
 }
 
 .small-caps-header {

@@ -16,7 +16,11 @@
 
   &_container {
     position: relative;
-    height: 60vh;
+    height: 30vh;
+
+    @include media-breakpoint-up(sm) {
+      height: 60vh;
+    }
   }
 
   &.labels-on {
