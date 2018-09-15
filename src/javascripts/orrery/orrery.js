@@ -48,7 +48,12 @@ $(document).ready(function() {
 
   $('#toggle-pluto').click( function(e) {
     e.preventDefault();
-    togglePluto();
+    $('.pluto').toggle();
+    if( $(this).text() == "Add it back once you’ve seen the light" ) {
+      $(this).text( "Remove it if it bothers you" );
+    } else {
+      $(this).text( "Add it back once you’ve seen the light" );
+    }
   })
 
 });
@@ -81,8 +86,4 @@ function toggleLabels() {
   $('.universe').toggleClass('labels-on');
 
   $('.control-labels').toggleClass('active');
-}
-
-function togglePluto() {
-  $('.pluto').toggle();
 }
