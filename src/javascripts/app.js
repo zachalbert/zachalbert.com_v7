@@ -7,4 +7,4 @@ import './orrery/orrery'
 import './orrery/star-field'
 // import './orrery/svgbg'
 
-import './modules/smooth-scroll'
+import './smooth-scroll'
