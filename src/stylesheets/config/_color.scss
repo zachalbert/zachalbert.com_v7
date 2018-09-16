@@ -1,6 +1,8 @@
 /* Color System */
-$base-color-dark: #244B54;
+$base-color-dark:  #244B54;
 
+$color-link:       #45ABD5;
+$color-link-hover: #35BDF5;
 
 /* Color System Applied */
 body {
@@ -8,10 +10,10 @@ body {
 }
 
 a {
-  color: #ff5724;
+  color: $color-link;
 
   &:hover {
-    color: #1B658F;
+    color: $color-link-hover;
   }
 }
 
