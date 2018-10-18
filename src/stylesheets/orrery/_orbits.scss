@@ -53,7 +53,7 @@
     animation-timing-function: linear;
   }
 
-  /* Cast shadows from planet */
+  /* Cast ground shadows from planet */
   @include media-breakpoint-up(sm) {
     &:after {
       content: '';
@@ -65,7 +65,8 @@
       border-radius: 50%;
       left: 50%;
       margin-left: 0em;
-      transform: translate3d(-0.5em,-50px,-42px);
+      transform: translate3d(-0.5em,-50px,-4.25vw);
+      transform-style: preserve-3d;
     }
   }
 }

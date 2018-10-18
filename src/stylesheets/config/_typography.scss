@@ -3,7 +3,7 @@
 
 /* Sizing */
 $base-font-size: 24px;
-$base-line-height: 1.5;
+$base-line-height: 1.414;
 $base: ($base-font-size * $base-line-height) / 3;
 
 /* Fonts */
@@ -17,7 +17,7 @@ $font-size-h2: $base-font-size * $base-line-height * $base-line-height;
 $font-size-h3: $base-font-size * $base-line-height;
 $font-size-h4: $base-font-size;
 $font-size-h5: $base-font-size * ($base-line-height * 0.75);
-$font-size-h6: $base-font-size * ($base-line-height * 0.75);
+$font-size-h6: $base-font-size * ($base-line-height * 0.6);
 $font-size-body: $base-font-size;
 $font-size-small: $font-size-h5;
 
@@ -25,7 +25,8 @@ $font-size-small: $font-size-h5;
   line-height: $base * 6;
   font-size: $font-size-h1;
   margin: 0 0 ( $base * 6 );
-	font-variant-ligatures: discretionary-ligatures; 
+	font-variant-ligatures: discretionary-ligatures;
+  font-weight: 100;
 }
 .h2      { line-height: $base * 5; font-size: $font-size-h2; }
 .h3      { line-height: $base * 4; font-size: $font-size-h3; margin: ($base * 6) 0 ($base * 3); }
@@ -56,15 +57,14 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: lowercase;
 }
 
+h5, h6 {
+  font-weight: 400;
+}
+
 .page-title {
   @extend .h1;
-  font-weight: 500;
-  // line-height: $base-line-height;
   font-family: $font-stack-special;
-  // text-transform: capitalize;
-	border-bottom: 1px solid #b3b3b3;
-  // font-style: italic;
-  padding: ( $base * 6 ) 0;
+  padding: ( $base * 4 ) 0;
 }
 
 .small-caps-header {

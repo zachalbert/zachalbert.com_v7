@@ -37,6 +37,7 @@
         margin-top: -($orbitDiameter / 2);
         margin-left: -($orbitDiameter / 2);
 
+        /* Ground shadow */
         &:after {
           width: $diameter * 0.85;
           height: $diameter * 1.35;
