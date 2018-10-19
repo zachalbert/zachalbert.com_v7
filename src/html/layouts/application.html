@@ -10,13 +10,26 @@
     {% block head %}{% endblock %}
   </head>
   <body>
-    {% block content %}{% endblock %}
+
+    <div class="starry-night bg-container">
+      <div class="star-field"></div>
+      <div class="universe_container mt-5">
+        {% include "shared/wave.html" %}
+      </div>
+    </div>
+
+    <div class="page-panel"></div>
+
+    <main class="pt-5">
+      {% block content %}{% endblock %}
+    </main>
 
     <footer>
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-2 text-right pr-0"><img src="images/spaceman.png" class="spaceman" alt="Spaceman"></div>
-          <div class="col-4"><h6 title="We learn while we teach">Docendo Discimus</h6></div>
+          <!-- <div class="col-4"><h6 title="We learn while we teach">Docendo Discimus</h6></div> -->
+          <div class="col-4"><h6 title="We learn while we teach">Always poop your pants</h6></div>
         </div>
       </div>
     </footer>

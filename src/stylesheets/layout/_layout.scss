@@ -35,20 +35,46 @@ html, body {
   position: relative;
 }
 
+.card--super {
+  margin-top: $lead-1;
+  padding: 0;
+  border-radius: $lead-1;
+  border: 1px solid rgba(0,0,0,0.20);
+  box-shadow: 0 30px 90px -20px rgba(0,0,0,0.20);
+  overflow: hidden;
+  position: relative;
+}
+
+main {
+  margin-bottom: -60vh;
+}
+
+.bg-container {
+  position: absolute;
+  width: 100%;
+}
+
+.page-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 60vh;
+  background-image: linear-gradient(180deg, #FFFFFF, #F2F6F7);
+}
+
 .page {
   min-height: 40vh;
+  padding-bottom: $lead-4;
 }
 
 footer {
   margin-top: $base * 10;
   padding-top: $base * 3;
+  position: relative;
+  top: 60vh;
 
   .spaceman {
     margin-top: $base * 0.8;
     max-width: 100px;
-  }
-
-  h5, h6 {
-    opacity: 0.5;
   }
 }

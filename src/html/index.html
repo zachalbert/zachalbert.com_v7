@@ -1,89 +1,122 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-{% include "shared/header.html" %}
 
-<div class="page">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 mx-auto">
-        <h1 class="page-title text-center mx-auto">
-          <!-- Product Designer, Mentor, Developer -->
-          <!-- Making nice things for screens -->
-          <!-- Product designer who codes. Currently training designers at Tradecraft. -->
-          <!-- Codes pretty well, for a designer. -->
-          <!-- Helping<br>designers<br>get better. -->
-          <!-- Designicoding 👾👽🚀🛰 -->
-          <span class="greetings">
-            <span class="greetings-icon">🔭</span>
-            <span class="greetings-icon__shadow"></span>
-          </span><br><br>
-          <!-- Hi, I'm Zac -->
-          Blah, blah blah.
-        </h1>
-        <p>
-          I'm a digital product designer and entrepreneur, and I spend most of
-          my time mentoring and developing designers. I’ve spent the last <span data-module="time-worked"></span> running the product design program at
-          <a href="http://tradecraft.com/">Tradecraft</a>, and have trained over
-          350 designers who now work all over the world in places like Google,
-          Netflix, Tesla, Samsung and Facebook.
-          <a href="https://www.coursereport.com/schools/tradecraft">We have good reviews</a>.
-        </p>
-        <p>
-          Prior to that, I worked for over 10 years as a consultant and first product designer / UX designer
-          for many early stage startups, larger orgs like Target, and as a cofounder
-          of <a href="https://foliotwist.com/">my own startup built to help fine artists</a>.
-          I've done everything from graphic design, to 3D modeling, to product management,
-          but I'm happiest when doing end-to-end design and hand coding prototypes
-          alongside developers, researchers, and product managers.
-        </p>
-        <h3>stuff</h3>
-        <p>
-          I train designers to be resilient, able to get work done, etc.
-          I ask designers to pursue the same principles I pursue for myself, namely that designers should&hellip;
-          <ul>
-            <li>&hellip; work on things that should exist</li>
-            <li>&hellip; look out for each other</li>
-            <li>&hellip; be autodidacts</li>
-            <li>&hellip; be aggressively curious</li>
-            <li>&hellip; be resilient AF</li>
-            <li>&hellip; be systems thinkers</li>
-            <li>&hellip; be disciplined</li>
-          </ul>
-        </p>
-        <h3>Why all the space stuff?</h3>
-        <p>
-          I have an unhealthy love for both CSS and the beauty of orbital motion.
-          I make orreries like the one above, or
-          <a href="https://www.youtube.com/watch?v=-cquQ29Glos">this one</a>, or
-          <a href="/v6/index.html#top">this other one</a> to satiate my inner nerd.
-        </p>
-        <p>
-          The orrery above uses real planetary data from nasa so their relative
-          orbital motion is correct. However, I've taken artistic license with both
-          the scale of the planets and their orbital distances.
-        </p>
-        <p>
-          Pluto is included above because I’m not a savage who would revoke planethood once granted.
-          <a href="#" id="toggle-pluto">Remove it if it bothers you</a>. #makeplutoplanetagain
-        </p>
-        <h3 id="contact">Contact me</h3>
-        <div class="row">
-          <div class="col-8">
-            <p>
-              If you want to reach out, <a href="mailto:zachalbert@gmail.com">send
-                me an email</a>. I don't social media much these days, but I can
-                occasionally be spotted on <a href="https://twitter.com/zachalbert">Twitter</a>,
-                <a href="https://www.linkedin.com/in/zachalbert/">Linkedin</a>, or
-                recommending and writing on <a href="https://medium.com/@ZacHalbert">Medium</a>.
-            </p>
-          </div>
-          <div class="col-4">
-            <img src="images/zac-halbert-1.jpg" alt="Zac Halbert" class="main-photo">
+<div class="card card--super container">
+
+  <!-- <nav class="main">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="text-center text-left-on-sm col-12 col-sm-4">
+          <h1 class="site-title"><a href="/" class="nav-link">Zac Halbert</a></h1>
+        </div>
+        <div class="d-none d-sm-block col-sm-4">
+          <div class="universe-controls text-center">
+            <a href="#" id="toggle-pause" class="control-pause universe-controls_player"><span class="sr-only">pause</span></a>
+            <a href="#" id="toggle-play" class="control-play universe-controls_player"><span class="sr-only">play</span></a>
+            <a href="#" id="toggle-labels" class="control-labels"><span class="sr-only">labels</span></a>
           </div>
         </div>
+        <div class="text-center text-right-on-sm col-12 col-sm-4 text-right">
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav> -->
 
+  {% include "shared/header.html" %}
+
+  <div class="page">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 mx-auto">
+          <h1 class="page-title text-center mx-auto">
+            <!-- Product Designer, Mentor, Developer -->
+            <!-- Making nice things for screens -->
+            <!-- Product designer who codes. Currently training designers at Tradecraft. -->
+            <!-- Codes pretty well, for a designer. -->
+            <!-- Helping<br>designers<br>get better. -->
+            <!-- Designicoding 👾👽🚀🛰 -->
+            <!-- <span class="greetings">
+              <span class="greetings-icon">🔭</span>
+              <span class="greetings-icon__shadow"></span>
+            </span><br><br> -->
+            <span class="line"></span>
+            <span class="text">Hi, I'm Zac.</span>
+            <span class="line"></span>
+          </h1>
+          <p>
+            I'm saying lots of words about things. Important words, the best words.
+            I really do have all the best words. My words are so great they poop
+            rainbows. They make me lattes. My words give good footrubs. These words
+            are cooler than your words. They won't be told no. They take life seriously,
+            but not too seriously, and by god — they have had. enough.
+          </p>
+          <!-- <p>
+            I'm a digital product designer and entrepreneur, and I spend most of
+            my time mentoring and developing designers. I’ve spent the last <span data-module="time-worked"></span> running the product design program at
+            <a href="http://tradecraft.com/">Tradecraft</a>, and have trained over
+            350 designers who now work all over the world in places like Google,
+            Netflix, Tesla, Samsung and Facebook.
+            <a href="https://www.coursereport.com/schools/tradecraft">We have good reviews</a>.
+          </p>
+          <p>
+            Prior to that, I worked for over 10 years as a consultant and first product designer / UX designer
+            for many early stage startups, larger orgs like Target, and as a cofounder
+            of <a href="https://foliotwist.com/">my own startup built to help fine artists</a>.
+            I've done everything from graphic design, to 3D modeling, to product management,
+            but I'm happiest when doing end-to-end design and hand coding prototypes
+            alongside developers, researchers, and product managers.
+          </p>
+          <h3>stuff</h3>
+          <p>
+            I train designers to be resilient, able to get work done, etc.
+            I ask designers to pursue the same principles I pursue for myself, namely that designers should&hellip;
+            <ul>
+              <li>&hellip; work on things that should exist</li>
+              <li>&hellip; look out for each other</li>
+              <li>&hellip; be autodidacts</li>
+              <li>&hellip; be aggressively curious</li>
+              <li>&hellip; be resilient AF</li>
+              <li>&hellip; be systems thinkers</li>
+              <li>&hellip; be disciplined</li>
+            </ul>
+          </p>
+          <h3>Why all the space stuff?</h3>
+          <p>
+            I have an unhealthy love for both CSS and the beauty of orbital motion.
+            I make orreries like the one above, or
+            <a href="https://www.youtube.com/watch?v=-cquQ29Glos">this one</a>, or
+            <a href="/v6/index.html#top">this other one</a> to satiate my inner nerd.
+          </p>
+          <p>
+            The orrery above uses real planetary data from nasa so their relative
+            orbital motion is correct. However, I've taken artistic license with both
+            the scale of the planets and their orbital distances.
+          </p>
+          <p>
+            Pluto is included above because I’m not a savage who would revoke planethood once granted.
+            <a href="#" id="toggle-pluto">Remove it if it bothers you</a>. #makeplutoplanetagain
+          </p>
+          <h3 id="contact">Contact me</h3>
+          <div class="row">
+            <div class="col-8">
+              <p>
+                If you want to reach out, <a href="mailto:zachalbert@gmail.com">send
+                  me an email</a>. I don't social media much these days, but I can
+                  occasionally be spotted on <a href="https://twitter.com/zachalbert">Twitter</a>,
+                  <a href="https://www.linkedin.com/in/zachalbert/">Linkedin</a>, or
+                  recommending and writing on <a href="https://medium.com/@ZacHalbert">Medium</a>.
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="images/zac-halbert-1.jpg" alt="Zac Halbert" class="main-photo">
+            </div>
+          </div> -->
+
+      </div>
     </div>
   </div>
+
 </div>
 {% endblock %}

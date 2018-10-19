@@ -3,16 +3,16 @@
 
 /* Sizing */
 $base-font-size: 24px;
-$base-line-height: 1.414;
+$base-line-height: 1.5;
 $base: ($base-font-size * $base-line-height) / 3;
 
 /* Fonts */
-$font-stack-body:     'Cormorant', Georgia, Times, serif;
+$font-stack-body:    'Cormorant', Georgia, Times, serif;
 $font-stack-header:  'CormorantSC', Georgia, Times, serif;
 $font-stack-special: 'CormorantUnicase', Georgia, Times, serif;
 
 /* Type Scale */
-$font-size-h1: $base-font-size * $base-line-height * $base-line-height * $base-line-height;
+$font-size-h1: $base-font-size * $base-line-height * $base-line-height;
 $font-size-h2: $base-font-size * $base-line-height * $base-line-height;
 $font-size-h3: $base-font-size * $base-line-height;
 $font-size-h4: $base-font-size;
@@ -26,7 +26,7 @@ $font-size-small: $font-size-h5;
   font-size: $font-size-h1;
   margin: 0 0 ( $base * 6 );
 	font-variant-ligatures: discretionary-ligatures;
-  font-weight: 100;
+  font-weight: 700;
 }
 .h2      { line-height: $base * 5; font-size: $font-size-h2; }
 .h3      { line-height: $base * 4; font-size: $font-size-h3; margin: ($base * 6) 0 ($base * 3); }
@@ -53,18 +53,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-stack-header;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.065em;
 	text-transform: lowercase;
 }
 
 h5, h6 {
   font-weight: 400;
-}
-
-.page-title {
-  @extend .h1;
-  font-family: $font-stack-special;
-  padding: ( $base * 4 ) 0;
 }
 
 .small-caps-header {

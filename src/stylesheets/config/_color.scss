@@ -1,6 +1,8 @@
 /* Color System */
 $base-color-dark:  #244B54;
 
+$base-color-light: #89A7AB;
+
 $color-link:       #45ABD5;
 $color-link-hover: #35BDF5;
 
@@ -24,6 +26,9 @@ a {
 }
 
 footer {
-  background-color: $base-color-dark;
-  color: white;
+  color: $base-color-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $base-color-light;
 }
