@@ -1,0 +1,28 @@
+.speech-bubble {
+  position: relative;
+
+  h6 {
+    padding-left: $lead-1;
+    border-left: 1px solid $planetShadow;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0px;
+    border-right: 18px solid $planetShadow;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    border-right: 17px solid #F2F6F7;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+  }
+}

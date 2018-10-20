@@ -8,3 +8,4 @@ import './orrery/star-field'
 // import './orrery/svgbg'
 
 import './smooth-scroll'
+import './laffer'
