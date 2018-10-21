@@ -5,11 +5,13 @@
     padding-left: $lead-1;
     border-left: 1px solid $planetShadow;
   }
+}
 
+#joke {
   &:before {
     content: '';
     position: absolute;
-    left: -1px;
+    left: -2px;
     top: 0px;
     border-right: 18px solid $planetShadow;
     border-top: 18px solid transparent;
@@ -19,7 +21,7 @@
   &:after {
     content: '';
     position: absolute;
-    left: 1px;
+    left: 0px;
     top: 1px;
     border-right: 17px solid #F2F6F7;
     border-top: 17px solid transparent;

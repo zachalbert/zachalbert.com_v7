@@ -1,3 +1,4 @@
+/* Jokes courtesy of Laffy Taffy */
 let laffs = [
   [
     'What did the horse say when he fell down?',
@@ -27,7 +28,7 @@ let laffs = [
     'What do you call an angry pea?',
     'Grum-pea.'
   ], [
-    'What did the house wear to the party&gt;',
+    'What did the house wear to the party?',
     'Address.'
   ], [
     'Why do bananas have to put on sunscreen?',
@@ -417,7 +418,7 @@ let laffs = [
     'What do you call a grandmother who tells jokes?',
     'A gram cracker.'
   ], [
-    'What do you call a horse that likes arts &amp; crafts?',
+    'What do you call a horse that likes arts & crafts?',
     'A hobby horse.'
   ], [
     'Why do shoemakers go to heaven?',
@@ -452,51 +453,49 @@ let laffs = [
   ]
 ];
 
-function getRandomJoke() {
-  let randomJoke = laffs[ Math.floor( Math.random() * laffs.length ) ];
-  return randomJoke;
-}
-
-function updateJoke( joke ) {
-  if( joke == 'clear' ) {
-    $('#joke').fadeOut(450);
+function getRandomJoke( id ) {
+  if( id != null ) {
+    return laffs[id];
   } else {
-    $('#joke').text( joke ).fadeIn(600);
+    return laffs[ Math.floor( Math.random() * laffs.length ) ];
   }
 }
 
-function updatePunchline( punchline ) {
-  if( punchline == 'clear' ) {
-    $('#punchline').fadeOut(450);
-  } else {
-    $('#punchline').text( punchline ).fadeIn(600);
-  }
+function updateJoke() {
+
 }
 
-function tellMeAJoke( duration = 7500 ) {
+function tellMeAJoke( duration = 6500 ) {
+  let jokeEl = $('#joke');
+  let punchlineEl = $('#punchline');
+  let fadeTime = 500;
 
-  // First, clear both slots
-  updateJoke( 'clear' )
-  updatePunchline( 'clear' );
+  let randomId = Math.floor( Math.random() * laffs.length );
+  let initialJoke = getRandomJoke( randomId );
+  let lastJoke = randomId;
+  jokeEl.text( initialJoke[0] );
+  punchlineEl.text( initialJoke[1] );
 
-  // Then, get a random joke array
-  let joke = getRandomJoke();
+  let jokeInterval = setInterval( function() {
+    // Get a random joke that is different from the last one
+    do {
+      // Get a random joke array, assign to variables
+      randomId = Math.floor( Math.random() * laffs.length );
+    } while( randomId == lastJoke );
+    let randomJoke = getRandomJoke( randomId );
 
-  // Immediately update the #joke el with [0]
-  updateJoke( joke[0] );
+    // Update lastJoke with the selected id
+    lastJoke = randomId;
 
-  // After a duration, maybe half of the total, update the #punchline el with [1]
-  setTimeout( function() {
-    updatePunchline( joke[1] );
-  }, duration/2 );
+    // Assign joke and punchline to separate variables
+    let joke = randomJoke[0];
+    let punchline = randomJoke[1];
 
-  setTimeout( function() {
-    $('#joke, #punchline').fadeOut(800);
-  }, duration - 800 );
+    // Animate the text
+    jokeEl.fadeOut( 0 ).text( joke ).fadeIn( fadeTime ).delay( duration - (fadeTime*3) ).fadeOut( fadeTime );
+    punchlineEl.fadeOut( 0 ).text( punchline ).delay( (duration/2) - fadeTime ).fadeIn( fadeTime ).delay( (duration/2) - (fadeTime*2) ).fadeOut( fadeTime );
 
-  setTimeout( function() {
-    tellMeAJoke();
-  }, duration);
+  }, duration / .9 );
 }
 
 tellMeAJoke();
