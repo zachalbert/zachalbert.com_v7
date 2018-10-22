@@ -35,10 +35,10 @@
 }
 
 .dad-joke-intro {
+  display: none;
   font-style: italic;
   text-align: center;
   margin-bottom: $lead-2;
   color: $base-color-dark;
   padding-bottom: $base;
-  border-bottom: 1px solid $base-color-light;
 }

@@ -7,7 +7,7 @@ $(document).ready(function() {
     let top     = (Math.random() * 100) + 1 + '%';
     let left    = (Math.random() * 100) + 1 + '%';
     let size    = (Math.random() * 4) + .5 + 'px';
-    let opacity = (Math.random() * 0.25) + 0.55;
+    let opacity = (Math.random() * 0.2) + 0.4;
 
     stars.push('<div class="star" style="top: '+ top +'; left: '+ left +'; width: '+ size +'; height: '+ size +'; opacity: '+ opacity +';"></div>');
   }
