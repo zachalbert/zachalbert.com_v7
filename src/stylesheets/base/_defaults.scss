@@ -6,9 +6,9 @@ img {
 
 a {
   text-decoration: none;
-  transition: all 0.3s ease-out;
+  transition: $transition-off;
 
   &:hover {
-    transition: all 0.2s ease-in;
+    transition: $transition-on;
   }
 }

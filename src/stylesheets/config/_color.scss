@@ -1,7 +1,7 @@
 /* Color System */
 $base-color-dark:  #244B54;
 
-$base-color-light: #89A7AB;
+$base-color-light: #7C9699;
 
 $color-link:       #45ABD5;
 $color-link-hover: #35BDF5;
@@ -15,6 +15,7 @@ body {
 
 a {
   color: $color-link;
+  font-weight: bold;
 
   &:hover {
     color: $color-link-hover;
