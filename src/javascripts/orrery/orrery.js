@@ -23,14 +23,14 @@ $(document).ready(function() {
     }
   }
 
-  $('#toggle-pause').click( function(e) {
-    e.preventDefault();
-    if( $('.universe').hasClass('pause') ) {
-      universePlay();
-    } else {
-      universePause();
-    }
-  })
+  // $('#toggle-pause').click( function(e) {
+  //   e.preventDefault();
+  //   if( $('.universe').hasClass('pause') ) {
+  //     universePlay();
+  //   } else {
+  //     universePause();
+  //   }
+  // })
 
   $('#toggle-play').click( function(e) {
     e.preventDefault();
@@ -48,12 +48,9 @@ $(document).ready(function() {
 
   $('#toggle-pluto').click( function(e) {
     e.preventDefault();
-    $('.pluto').toggle();
-    if( $(this).text() == "Add it back once you’ve seen the light" ) {
-      $(this).text( "Remove it if it bothers you" );
-    } else {
-      $(this).text( "Add it back once you’ve seen the light" );
-    }
+
+    $(this).toggleClass('active');
+    $('.pluto').toggleClass('hidden');
   })
 
 });
@@ -62,16 +59,16 @@ function universePlay() {
   $('.universe').removeClass('pause fast');
   $('.universe').addClass('play');
 
-  $('.universe-controls_player').removeClass('active');
-  $('.control-play').addClass('active');
+  // Change play button to a pause button
+  $('#toggle-play').removeClass('play').addClass('pause active');
 }
 
 function universePause() {
   $('.universe').removeClass('play fast');
   $('.universe').addClass('pause');
 
-  $('.universe-controls_player').removeClass('active');
-  $('.control-pause').addClass('active');
+  // Change pause button to a play button
+  $('#toggle-play').removeClass('pause active').addClass('play');
 }
 
 function universeFast() {
@@ -85,5 +82,5 @@ function universeFast() {
 function toggleLabels() {
   $('.universe').toggleClass('labels-on');
 
-  $('.control-labels').toggleClass('active');
+  $('#toggle-labels').toggleClass('active');
 }

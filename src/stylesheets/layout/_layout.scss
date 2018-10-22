@@ -43,6 +43,10 @@ html, body {
   box-shadow: 0 30px 90px -20px rgba(0,0,0,0.20);
   overflow: hidden;
   position: relative;
+
+  .starry-night {
+    padding-top: $lead-2;
+  }
 }
 
 main {

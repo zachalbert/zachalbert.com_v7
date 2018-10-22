@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
     <title>icon-play</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
     <g id="icon-play" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="icon-play-copy" fill="#FFFFFF" points="21 16 11 24 11 8"></polygon>
+        <polygon id="Path-3" fill="#244B54" points="22 20 22 34 32 27"></polygon>
     </g>
 </svg>

@@ -14,3 +14,35 @@
     mix-blend-mode: difference;
   }
 }
+
+.orbit {
+  &:after,
+  & .planet,
+  & .symbol {
+    opacity: 1;
+    transition: opacity 0.45s ease-out;
+  }
+
+  &.hidden {
+    &:after,
+    & .planet,
+    & .symbol {
+      opacity: 0 !important;
+      transition: opacity .75s ease-in;
+    }
+  }
+}
+
+.universe {
+  .symbol {
+    opacity: 0;
+    transition: opacity .75s ease-in;
+  }
+
+  &.labels-on {
+    .symbol {
+      opacity: 1;
+      transition: opacity 0.45s ease-out;
+    }
+  }
+}

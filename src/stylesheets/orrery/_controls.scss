@@ -1,56 +1,69 @@
+.orrery-nav {
+  position: absolute;
+  left: $lead-1;
+  top: $lead-1;
+  z-index: 999;
+}
+
 .universe-controls {
   font-size: 0;
 
-  a {
+  &__control {
     font-size: $base-font-size;
     background-repeat: no-repeat;
     background-position: center;
-    width: 32px;
-    height: 32px;
+    width: $lead-1 * 1.5;
+    height: $lead-1 * 1.5;
+    margin-bottom: $base * 2;
     box-sizing: content-box;
-    padding: 0.5em;
-    display: inline-block !important;
-    opacity: 0.35;
+    display: block;
+    border-radius: 50%;
     border: 1px solid rgba(255,255,255, 0.5);
+    transform: scale(1);
+    transition: transform 0.03s ease-out;
 
     &.active {
-      background-color: rgba(255,255,255,0.1);
-    }
+      background: white;
 
-    &:first-child {
-      border-radius: 50% 0 0 50%;
-      margin-right: -1px;
-    }
+      svg path,
+      svg polygon {
+        fill: $planetShadow;
+      }
 
-    &:last-child {
-      border-radius: 0 50% 50% 0;
-      margin-left: -1px;
+      &:hover {
+        background-color: white;
+      }
     }
 
     &:hover {
-      opacity: 0.5;
+      background-color: rgba(255, 255, 255, 0.05);
     }
 
-    &.active {
-      opacity: 1;
+    &:active {
+      transform: scale(0.95);
+      transition: transform 0.03s ease-out;
     }
-  }
-}
 
-.control {
-  &-pause {
-    background-image: url('../images/icon-pause.svg');
-  }
+    svg path,
+    svg polygon {
+      fill: $planetColor;
+    }
 
-  &-play {
-    background-image: url('../images/icon-play.svg');
-  }
+    &#toggle-play.play {
+      .icon-play { display: block; }
+      .icon-pause { display: none; }
+    }
 
-  &-fast {
-    background-image: url('../images/icon-fast.svg');
-  }
+    &#toggle-play.pause {
+      .icon-play { display: none; }
+      .icon-pause { display: block; }
+    }
 
-  &-labels {
-    background-image: url('../images/icon-info.svg');
+    &#toggle-labels {
+    }
+
+    &#toggle-pluto {
+    }
+
   }
 }
