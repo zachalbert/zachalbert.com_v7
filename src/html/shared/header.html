@@ -4,7 +4,7 @@
     <div class="star-field"></div>
 
     <nav class="orrery-nav">
-      <div class="universe-controls text-center">
+      <div class="universe-controls">
         <!-- <a href="#" id="toggle-pause" class="control-pause universe-controls_player"><span class="sr-only">pause</span></a>
         <a href="#" id="toggle-play" class="control-play universe-controls_player"><span class="sr-only">play</span></a> -->
 
@@ -12,31 +12,40 @@
           <span class="sr-only">Turn orrery on and off</span>
           <svg class="icon-play" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="icon-play" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <polygon id="Path-3" fill="#244B54" points="22 20 22 34 32 27"></polygon>
+              <polygon id="Path-3" fill="#244B54" points="25 20 25 34 35 27"></polygon>
             </g>
-          </svg>
-          <svg class="icon-pause" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          </svg><svg class="icon-pause" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="icon-pause" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <path d="M20,20 L25,20 L25,34 L20,34 L20,20 Z M29,20 L34,20 L34,34 L29,34 L29,20 Z" id="Combined-Shape" fill="#244B54"></path>
+              <path d="M21,20 L25,20 L25,34 L21,34 L21,20 Z M29,20 L33,20 L33,34 L29,34 L29,20 Z" id="Combined-Shape" fill="#244B54"></path>
             </g>
-          </svg>
-        </a>
+          </svg><span class="universe-controls__control__label--play">Play</span><span class="universe-controls__control__label--pause">Pause</span>
+        </a><br>
         <a href="#" id="toggle-labels" class="universe-controls__control" title="See labels over each planet">
           <span class="sr-only">Turn labels on</span>
           <svg class="icon-info" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="icon-info" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <path d="M24,26 L30,26 L30,34 L24,34 L24,26 Z M27,24 C25.3431458,24 24,23.1045695 24,22 C24,20.8954305 25.3431458,20 27,20 C28.6568542,20 30,20.8954305 30,22 C30,23.1045695 28.6568542,24 27,24 Z" id="Combined-Shape" fill="#244B54"></path>
+              <path d="M25,26 L29,26 L29,34 L25,34 L25,26 Z M27,24 C25.3431458,24 24,23.1045695 24,22 C24,20.8954305 25.3431458,20 27,20 C28.6568542,20 30,20.8954305 30,22 C30,23.1045695 28.6568542,24 27,24 Z" id="Combined-Shape" fill="#244B54"></path>
             </g>
-          </svg>
-        </a>
+          </svg><span class="universe-controls__control__label">Labels</span>
+        </a><br>
         <a href="#" id="toggle-pluto" class="universe-controls__control active" title="Turn Pluto on or off to make the orrery conform to your beliefs about planethood. #MakePlutoPlanetAgain">
           <span class="sr-only">Turn pluto on and off</span>
           <svg class="icon-pluto" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="icon-pluto" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <path d="M23,31 L34,31 L34,34 L20,34 L20,20 L28,20 C31.4166667,20 33.5,21.5625 33.5,24.5 C33.5,27.4375 31.4166667,29 28,29 L23,29 L23,27.5 L23,31 Z M23,26 L28,26 C29.9166667,26 30.5,25.5625 30.5,24.5 C30.5,23.4375 29.9166667,23 28,23 L23,23 L23,27.5 L23,26 Z" id="Path-4" fill="#244B54" fill-rule="nonzero"></path>
             </g>
-          </svg>
+          </svg><span class="universe-controls__control__label">Pluto</span>
         </a>
+        <!--  Control for the variable speed feature (todo).
+        <a href="#" id="toggle-speed" class="universe-controls__control" title="Change the speed of the solar system animation.">
+          <span class="sr-only">Change the speed of the solar system animation</span>
+          <svg class="icon-fast" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="icon-fast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <polygon id="Path-3" fill="#244B54" points="20 20 20 34 30 27"></polygon>
+              <polygon id="Path-3-Copy" fill="#244B54" points="26 20 26 34 36 27"></polygon>
+            </g>
+          </svg>
+        </a>-->
       </div>
     </nav>
 

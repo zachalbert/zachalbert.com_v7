@@ -23,15 +23,6 @@ $(document).ready(function() {
     }
   }
 
-  // $('#toggle-pause').click( function(e) {
-  //   e.preventDefault();
-  //   if( $('.universe').hasClass('pause') ) {
-  //     universePlay();
-  //   } else {
-  //     universePause();
-  //   }
-  // })
-
   $('#toggle-play').click( function(e) {
     e.preventDefault();
     if( $('.universe').hasClass('play') ) {
@@ -61,6 +52,8 @@ function universePlay() {
 
   // Change play button to a pause button
   $('#toggle-play').removeClass('play').addClass('pause active');
+  // $('.universe-controls__control__label--play').hide();
+  // $('.universe-controls__control__label--pause').show();
 }
 
 function universePause() {
@@ -69,6 +62,8 @@ function universePause() {
 
   // Change pause button to a play button
   $('#toggle-play').removeClass('pause active').addClass('play');
+  // $('.universe-controls__control__label--play').show();
+  // $('.universe-controls__control__label--pause').hide();
 }
 
 function universeFast() {

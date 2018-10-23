@@ -12,18 +12,21 @@
     font-size: $base-font-size;
     background-repeat: no-repeat;
     background-position: center;
-    width: $lead-1 * 1.5;
+    // width: $lead-1 * 1.5;
     height: $lead-1 * 1.5;
+    border-radius: ($lead-1 * 1.5) / 2;
     margin-bottom: $base * 2;
     box-sizing: content-box;
-    display: block;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255, 0.5);
-    transform: scale(1);
-    transition: transform 0.03s ease-out;
+    display: inline-block;
+    box-shadow:
+      0 0 0 2px rgba(255, 255, 255, 0.5),
+      0 0 0 4px transparent;
 
     &.active {
       background: white;
+      box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 1),
+        0 0 0 4px $base-color-dark;
 
       svg path,
       svg polygon {
@@ -31,18 +34,45 @@
       }
 
       &:hover {
-        background-color: white;
+        background-color: rgba(221, 227, 229, 1);
+        box-shadow:
+          0 0 0 2px rgba(221, 227, 229, 1),
+          0 0 0 4px $base-color-dark;
+      }
+
+      .universe-controls__control__label,
+      .universe-controls__control__label--play,
+      .universe-controls__control__label--pause {
+        color: $base-color-dark;
       }
     }
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.05);
-      border-color: white;
+      box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 1),
+        0 0 0 4px transparent;
+
+      .universe-controls__control__label {
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+
+    &__label,
+    &__label--play,
+    &__label--pause {
+      @extend .h6;
+      padding-right: $base * 2;
+      display: none;
+      text-decoration: none;
+      font-weight: 700;
+      color: white;
     }
 
     &:active {
       transform: scale(0.97);
-      transition: transform 0.03s ease-out;
+      transition: transform 0.01s ease-out;
     }
 
     svg path,
@@ -51,13 +81,23 @@
     }
 
     &#toggle-play.play {
-      .icon-play { display: block; }
+      .icon-play { display: inline-block; }
       .icon-pause { display: none; }
     }
 
     &#toggle-play.pause {
       .icon-play { display: none; }
-      .icon-pause { display: block; }
+      .icon-pause { display: inline-block; }
+    }
+
+    &#toggle-play.play:hover {
+      .universe-controls__control__label--play { display: inline-block !important; }
+      .universe-controls__control__label--pause { display: none !important; }
+    }
+
+    &#toggle-play.pause:hover {
+      .universe-controls__control__label--play { display: none !important; }
+      .universe-controls__control__label--pause { display: inline-block !important; }
     }
 
     &#toggle-labels {

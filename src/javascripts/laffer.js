@@ -447,6 +447,9 @@ let laffs = [
   ], [
     'What has no legs but can do a split?',
     'A banana.'
+  ], [
+    'What do you call a dog with no legs?',
+    'Doesn\'t matter, he ain\'t comin\'.'
   ]
 ];
 
