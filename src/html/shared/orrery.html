@@ -3,13 +3,15 @@
   <div class="galaxy">
 
     <div class="sun planet">
-      <div class="symbol">☉</div>
+      <div class="planet-label">☉</div>
     </div>
 
     {% for planet, symbol in planets %}
       <div class="{{ planet }} orbit">
         <div class="pos">
-          <div class="symbol" title="{{ symbol }}: {{ planet }}">{{ symbol }}</div>
+          <div class="planet-label" title="{{ symbol }}: {{ planet }}">
+            {{ symbol }}
+          </div>
           <div class="planet" title="{{ planet }}">
             <div class="light-side"></div>
             <div class="dark-side"></div>

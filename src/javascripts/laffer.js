@@ -445,9 +445,6 @@ let laffs = [
     'What word is always spelled incorrectly?',
     'Incorrectly.'
   ], [
-    'What should you do if your dog is missing?',
-    'The lost and hound.'
-  ], [
     'What has no legs but can do a split?',
     'A banana.'
   ]

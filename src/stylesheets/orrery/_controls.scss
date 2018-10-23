@@ -18,7 +18,7 @@
     box-sizing: content-box;
     display: block;
     border-radius: 50%;
-    border: 1px solid rgba(255,255,255, 0.5);
+    border: 2px solid rgba(255,255,255, 0.5);
     transform: scale(1);
     transition: transform 0.03s ease-out;
 
@@ -37,10 +37,11 @@
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.05);
+      border-color: white;
     }
 
     &:active {
-      transform: scale(0.95);
+      transform: scale(0.97);
       transition: transform 0.03s ease-out;
     }
 
