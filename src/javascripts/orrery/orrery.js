@@ -52,8 +52,6 @@ function universePlay() {
 
   // Change play button to a pause button
   $('#toggle-play').removeClass('play').addClass('pause active');
-  // $('.universe-controls__control__label--play').hide();
-  // $('.universe-controls__control__label--pause').show();
 }
 
 function universePause() {
@@ -62,8 +60,6 @@ function universePause() {
 
   // Change pause button to a play button
   $('#toggle-play').removeClass('pause active').addClass('play');
-  // $('.universe-controls__control__label--play').show();
-  // $('.universe-controls__control__label--pause').hide();
 }
 
 function universeFast() {
