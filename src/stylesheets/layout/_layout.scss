@@ -73,7 +73,7 @@ main {
 
 .card__footer {
   &__contact {
-    // border-top: 1px solid $base-color-light;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     background-color: hsl(0, 0, 95);
     padding: 0 $lead-1 !important;
 

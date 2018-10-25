@@ -28,3 +28,10 @@
     z-index: 9;
   }
 }
+
+$outlineWidth: 3px;
+
+.page-title {
+  z-index: 999;
+  position: relative;
+}
