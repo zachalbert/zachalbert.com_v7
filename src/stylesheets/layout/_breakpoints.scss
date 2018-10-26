@@ -1,0 +1,58 @@
+@media (min-width: map-get($grid-breakpoints, sm)) {
+  .card--super {
+    border-radius: $lead-1;
+    border: 1px solid rgba(0,0,0,0.20);
+  }
+
+  .container {
+    width: $container-max-width;
+    max-width: $container-max-width;
+  }
+
+  .bg-container {
+    display: block;
+  }
+
+  .page-panel {
+    margin-top: 60vh;
+  }
+
+  main {
+    padding-top: 6vw;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+  .container {
+    width: $container-max-width;
+    max-width: $container-max-width;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  .container {
+    width: $container-max-width;
+    max-width: $container-max-width;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+  .container {
+    width: $container-max-width;
+    max-width: $container-max-width;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, xxl)) {
+  .container {
+    width: $container-max-width;
+    max-width: $container-max-width;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, xxxl)) {
+  .container {
+    width: $container-max-width;
+    max-width: $container-max-width;
+  }
+}

@@ -14,7 +14,7 @@
     $offset:          $startOffset / 360deg;
     $delay:           -($orbitSpeed - ($orbitSpeed * $offset));
 
-    @if $syncPlanets == true {
+    @if $devMode == true {
       $orbitSpeed: 20s; /* Sync orbital periods, for dev purposes */
     }
 

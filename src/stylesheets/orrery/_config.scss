@@ -1,7 +1,7 @@
 /* Main Orrery Settings */
 $viewingAngle:           75deg;
 $speedLimit:             8;
-$syncPlanets:            false; /* If true, planets will rotate in sync; Useful for debugging */
+$devMode:                false; /* If true, planets will rotate in sync; Useful for debugging */
 
 /* Modulate the size of small, medium, and large planets so size delta isn't as dramatic */
 $sizeModSmallest:        0.16;
@@ -72,12 +72,12 @@ $symbolBorder:           none;
  ** and Saturn were really close together, so the 'start' values were changed.
  **
  ** Original values:
- ** Jupiter start: 252deg
- ** Saturn start: 187.5deg
+ ** Jupiter testStart: 252deg
+ ** Saturn testStart: 187.5deg
  **
  ** New values:
- ** Jupiter start: 330deg
- ** Saturn start: 230deg
+ ** Jupiter testStart: 330deg
+ ** Saturn testStart: 230deg
  **
 **/
 
@@ -91,99 +91,99 @@ $solarSystem: (
     id: 1,
     night: 20%,
     name: 'mercury',
-    diameter: 0.383vw / $sizeModSmall,
+    diameter: 1.0942857143vw,
     symbolOffset: 2.8em,
     speed: 1s * ( 87.97 / $speedLimit),
-    orbitDiameter: 20vw,
-    start: 270deg
-    // start: 0deg
+    orbitDiameter: 19.8vw,
+    start: 270deg,
+    startDev: 90deg
   ),
   venus: (
     id: 2,
     night: 20%,
     name: 'venus',
-    diameter: 0.950vw / $sizeModSmall,
+    diameter: 2.7142857143vw,
     symbolOffset: 3.5em,
     speed: 1s * ( 224.63 / $speedLimit),
     orbitDiameter: 28vw,
-    start: 237deg
-    // start: 0deg
+    start: 237deg,
+    startDev: 90deg
   ),
   earth: (
     id: 3,
     night: 20%,
     name: 'earth',
-    diameter: 1.00vw / $sizeModSmall,
+    diameter: 2.8571428571vw,
     symbolOffset: 3.5em,
     speed: 1s * ( 365.26 / $speedLimit),
-    orbitDiameter: 36vw,
-    start: 249deg
-    // start: 0deg
+    orbitDiameter: 36.5vw,
+    start: 249deg,
+    startDev: 90deg
   ),
   mars: (
     id: 4,
     night: 20%,
     name: 'mars',
-    diameter: 0.532vw / $sizeModSmall,
+    diameter: 1.52vw,
     symbolOffset: 3.1em,
     speed: 1s * ( 687.05 / $speedLimit),
-    orbitDiameter: 42vw,
-    start: 16.5deg
-    // start: 0deg
+    orbitDiameter: 42.5vw,
+    start: 16.5deg,
+    startDev: 90deg
   ),
   jupiter: (
     id: 5,
     night: 20%,
     name: 'jupiter',
-    diameter: 10.97vw / $sizeModLarge,
+    diameter: 5.7736842105vw,
     symbolOffset: 4.7em,
     speed: 1s * ( 4331.94 / $speedLimit),
-    orbitDiameter: 58vw,
-    start: 330deg
-    // start: 0deg
+    orbitDiameter: 57vw,
+    start: 330deg,
+    startDev: 90deg
   ),
   saturn: (
     id: 6,
     night: 20%,
     name: 'saturn',
-    diameter: 9.14vw / $sizeModLarge,
+    diameter: 4.8105263158vw,
     symbolOffset: 4.4em,
     speed: 1s * ( 10760.45 / $speedLimit),
-    orbitDiameter: 72vw,
-    start: 230deg
-    // start: 0deg
+    orbitDiameter: 69.5vw,
+    start: 230deg,
+    startDev: 90deg
   ),
   uranus: (
     id: 7,
     night: 20%,
     name: 'uranus',
-    diameter: 3.98vw / $sizeModLarge,
+    diameter: 2.0947368421vw,
     symbolOffset: 3.3em,
     speed: 1s * ( 30685.19 / $speedLimit),
-    orbitDiameter: 80vw,
-    start: 65.5deg
-    // start: 0deg
+    orbitDiameter: 77vw,
+    start: 65.5deg,
+    startDev: 90deg
   ),
   neptune: (
     id: 8,
     night: 20%,
     name: 'neptune',
-    diameter: 3.86vw / $sizeModLarge,
+    diameter: 2.0315789474vw,
     symbolOffset: 3.3em,
     speed: 1s * ( 60194.25 / $speedLimit),
-    orbitDiameter: 88.5vw,
-    start: 108deg
-    // start: 0deg
+    orbitDiameter: 84vw,
+    start: 108deg,
+    startDev: 90deg
   ),
   pluto: (
     id: 9,
     night: 20%,
     name: 'pluto',
-    diameter: 0.185vw / $sizeModSmallest,
+    diameter: 1.15625vw,
     symbolOffset: 2.8em,
     speed: 1s * ( 90620.10 / $speedLimit),
-    orbitDiameter: 95vw,
-    start: 160deg
-    // start: 0deg
+    orbitDiameter: 89vw,
+    start: 160deg,
+    startDev: 90deg
   )
 );

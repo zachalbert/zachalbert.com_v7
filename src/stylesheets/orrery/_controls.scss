@@ -1,7 +1,7 @@
 .orrery-nav {
   position: absolute;
   left: $lead-1;
-  top: $lead-1;
+  top: $lead-1 * 1.5;
   z-index: 999;
 }
 
@@ -24,6 +24,7 @@
 
     &.active {
       background: white;
+      border-color: white;
       box-shadow:
         0 0 0 2px rgba(255, 255, 255, 1),
         0 0 0 4px $base-color-dark;
@@ -34,10 +35,10 @@
       }
 
       &:hover {
-        // background-color: rgba(221, 227, 229, 1);
         background-color: white;
+        border-color: white;
         box-shadow:
-          0 0 0 2px rgba(221, 227, 229, 1),
+          0 0 0 2px white,
           0 0 0 4px $base-color-dark;
       }
 
