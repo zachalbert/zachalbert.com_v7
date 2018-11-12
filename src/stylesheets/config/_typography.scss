@@ -30,7 +30,7 @@ $font-size-small: $font-size-h5;
 }
 .h2      { line-height: $base * 5; font-size: $font-size-h2; }
 .h3      { line-height: $base * 4; font-size: $font-size-h3; margin: ($base * 6) 0 ($base * 3); }
-.h4      { line-height: $base * 3; font-size: $font-size-h4; }
+.h4      { line-height: $base * 3; font-size: $font-size-h4; margin: ($base * 6) 0 ($base * 3); }
 .h5      { line-height: $base * 3; font-size: $font-size-h5; }
 .h6      { line-height: $base * 3; font-size: $font-size-h6; }
 .body    { line-height: $base * 3; font-size: $font-size-body; }
@@ -96,9 +96,9 @@ h6,
 
 .page-title {
   @extend .h2;
-  padding: ($base*3) 0 $base;
 }
 
 .page-subtitle {
   font-style: italic;
+  font-weight: 700;
 }
