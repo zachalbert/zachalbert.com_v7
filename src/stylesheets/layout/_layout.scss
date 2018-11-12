@@ -91,9 +91,12 @@ main {
   }
 }
 
+.site-title-block {
+  margin-bottom: -($lead-4);
+}
+
 footer {
-  margin-top: $lead-2;
-  padding-top: $lead-1;
+  margin-top: $lead-1;
   position: relative;
   top: 60vh;
 

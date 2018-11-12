@@ -17,8 +17,9 @@ $( document ).ready( function() {
 			? true
 			: false;
 		if ( wideEnough ) {
-			// universePlay();
-			universePause();
+			// Default play behavior
+			universePlay();
+			// universePause();
 			$( '.universe-controls' ).show();
 		} else {
 			universePause();
