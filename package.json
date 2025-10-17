@@ -5,6 +5,13 @@
   "main": "index.js",
   "author": "Zac Halbert",
   "license": "MIT",
+  "resolutions": {
+    "graceful-fs": "^4.2.11"
+  },
+  "scripts": {
+    "dev": "blendid",
+    "build": "blendid build"
+  },
   "dependencies": {
     "blendid": "^4.4.3",
     "bootstrap": "^4.1.3",
